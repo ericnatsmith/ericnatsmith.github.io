@@ -22,7 +22,7 @@
     $(function() {
       $.ajax({
         type: "GET",
-        url: "practices.csv",
+        url: "practices.txt",
         dataType: "text",
         success: function(data) {
           console.log("CSV file loaded successfully.");
@@ -38,14 +38,14 @@
         console.log("Parsing CSV data...");
 
         var lines = data.split("\n");
-        var headers = lines[0].split(","); // Use "\t" as the delimiter
+        var headers = lines[0].split("\t"); // Use "\t" as the delimiter
 
         var availableTags = [];
 
         for (var i = 1; i < lines.length; i++) {
           var line = lines[i].trim();
           if (line !== "") {
-            var values = line.split(","); // Use "\t" as the delimiter
+            var values = line.split("\t"); // Use "\t" as the delimiter
             if (values.length === headers.length) {
               var item = {};
               for (var j = 0; j < headers.length; j++) {
