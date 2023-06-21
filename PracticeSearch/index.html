@@ -16,76 +16,95 @@
     }
   </style>
   <script>
-  var csvData;
-  var availableTags = [];
+    var csvData;
+    var availableTags = [];
 
 
-  $(function() {
+    $(function() {
 
-    $.ajax({
-      type: "GET",
-      url: "practices.csv",
-      dataType: "text",
-      success: function(data) {
-        console.log("CSV file loaded successfully.");
-        csvData = data;
-        parseCSV(csvData);
-      },
-      error: function(xhr, status, error) {
-        console.error("Failed to load CSV file:", error);
-      }
-    });
-
-    function parseCSV(data) {
-      console.log("Parsing CSV data...");
-      var lines = data.split("\n");
-      console.log("Number of lines in CSV:", lines.length);
-
-
-      for (var i = 1; i < lines.length; i++) {
-        var line = lines[i].trim();
-        if (line !== "") {
-          var values = line.split(",");
-          if (values.length === 4) {
-            var item = {
-              label: values[0].trim(),
-              question: values[1].trim(),
-              content: values[2].trim(),
-              keywords: values[3].trim()
-            };
-            availableTags.push(item);
-          }
-        }
-      }
-
-      initializeAutocomplete(availableTags);
-    }
-
-    function initializeAutocomplete(tags) {
-      $( "#form-search" ).autocomplete({
-        source: tags,
-        focus: function( e, ui ) {
-          $( "#form-search" ).val( ui.item.question + ui.item.label + ui.item.content + ui.item.keywords );
-          return false;
+      $.ajax({
+        type: "GET",
+        url: "practices.csv",
+        dataType: "text",
+        success: function(data) {
+          console.log("CSV file loaded successfully.");
+          csvData = data;
+          parseCSV(csvData);
         },
-        select: function(e, ui) { 
-          $( "#practice-title" ).html("<h2> Example Practice: " + ui.item.label + "</h2>").show();
-
-          $( "#full-label" ).html(ui.item.content + 
-            "<br><br><i>Click <u>here</u> if you would like to learn more about this practice" + 
-            "<br><br><i>Click <u>here</u> if you would like a different practice that addresses the question:<br>" + ui.item.question).show();
-          $( "#form-search" ).val('');
-          return false;
+        error: function(xhr, status, error) {
+          console.error("Failed to load CSV file:", error);
         }
-      })
-      .autocomplete("instance")._renderItem = function( ul, item ) {
-        return $( "<li></li>" )
-          .append( "<a>" + item.question + "</a>" )
-          .appendTo( ul );
-      };
+      });
+
+      function parseCSV(data) {
+        console.log("Parsing CSV data...");
+
+        var lines = data.split("\n");
+    var headers = lines[0].split("\t"); // Use "\t" as the delimiter
+
+    var availableTags = [];
+
+    for (var i = 1; i < lines.length; i++) {
+      var line = lines[i].trim();
+      if (line !== "") {
+        var values = line.split("\t"); // Use "\t" as the delimiter
+        if (values.length === headers.length) {
+          var item = {};
+          for (var j = 0; j < headers.length; j++) {
+            item[headers[j].trim()] = values[j].trim();
+          }
+          availableTags.push(item);
+        }
+      }
     }
-  });
-  </script>
+
+    initializeAutocomplete(availableTags);
+  }
+
+  function initializeAutocomplete(tags) {
+    $( "#form-search" ).autocomplete({
+      source: function(request, response) {
+        var term = request.term.toLowerCase();
+        var matchedTags = [];
+
+        tags.forEach(function(tag) {
+          var isMatched = false;
+          Object.values(tag).forEach(function(value) {
+            if (value.toLowerCase().indexOf(term) !== -1) {
+              isMatched = true;
+              return;
+            }
+          });
+          if (isMatched) {
+            matchedTags.push(tag);
+          }
+        });
+
+        response(matchedTags);
+      },
+      focus: function( e, ui ) {
+        $( "#form-search" ).val( ui.item.question );
+        return false;
+      },
+      select: function(e, ui) { 
+        $( "#practice-title" ).html("<h2> Example Practice: " + ui.item.label + "</h2>").show();
+
+        $( "#full-label" ).html(ui.item.content + 
+          "<br><br><i>Click <u>here</u> if you would like to learn more about this practice" + 
+          "<br><br><i>Click <u>here</u> if you would like a different practice that addresses the question:<br>" + ui.item.question).show();
+        $( "#form-search" ).val('');
+        return false;
+      }
+    })
+    .autocomplete("instance")._renderItem = function( ul, item ) {
+      return $( "<li></li>" )
+      .append( "<a>" + item.question + "</a>" )
+      .appendTo( ul );
+    };
+  }
+});
+
+</script>
 </head>
 <body>
   <header>
@@ -95,12 +114,12 @@
       </ul>  
     </nav>  
   </header>  
-    
+  
   <div class="google">
     <p id="google_logo">Student Success Practice Finder</p>
     <p> v 0.0.1 </p>
   </div>
-    
+  
   <div class="form">  
     <form>
       <label for="form-search"></label>
@@ -112,7 +131,7 @@
     <p id="practice-title" class="FAQ_title"></p>
     <div id="full-label"></div>
   </div>
-    
+  
   <div class="buttons">  
     <form action="PageNotFound.html" method="get" target="_blank">
       <input type="submit" value="My question isn't here..." id="submit1">    
@@ -125,6 +144,6 @@
     <p class="FAQ_title">What is this page?</p>
     <p>This is a search bar designed by and for educators to find and implement practices to support student success. Many practices are still in development, and we would appreciate any feedback at <a href="#">this link</a>.</p>
   </div>
-      
+  
 </body>
 </html>
