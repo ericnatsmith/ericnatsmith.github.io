@@ -58,13 +58,16 @@
         }
 
         initializeAutocomplete(availableTags);
+        populateQuestionDropdown(availableTags);
+
+
       }
 
       function initializeAutocomplete(tags) {
         $( "#form-search" ).autocomplete({
           source: tags,
           focus: function( e, ui ) {
-            $( "#form-search" ).val( ui.item.label );
+            $( "#form-search" ).val( ui.item.search );
             return false;
           },
           select: function(e, ui) { 
@@ -99,6 +102,13 @@
     <p id="google_logo">Student Success Practice Finder</p>
   </div>
 
+  <div class="dropdown">
+  <label for="question-dropdown">Search by your goal:</label>
+  <select id="question-dropdown">
+    <option value="">All Questions</option>
+  </select>
+</div>
+
   <div class="form">  
     <form>
       <label for="form-search"></label>
@@ -122,7 +132,7 @@
   <div class="FAQs">
     <p class="FAQ_title">What is this page?</p>
     <p>This is a search bar designed by and for educators to find and implement practices to support student success. Many practices are still in development, and we would appreciate any feedback at <a href="#">this link</a>.</p>
-    <p>Version 0.0.1</p>
+    <p>Version 0.0.2</p>
   </div>
 
 </body>
