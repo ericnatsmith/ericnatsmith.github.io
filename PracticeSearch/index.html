@@ -16,8 +16,11 @@
     }
   </style>
   <script>
+  var csvData;
+  var availableTags = [];
+
+
   $(function() {
-    var csvData;
 
     $.ajax({
       type: "GET",
@@ -38,7 +41,6 @@
       var lines = data.split("\n");
       console.log("Number of lines in CSV:", lines.length);
 
-      var availableTags = [];
 
       for (var i = 1; i < lines.length; i++) {
         var line = lines[i].trim();
