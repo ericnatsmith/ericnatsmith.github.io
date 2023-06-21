@@ -65,7 +65,7 @@
       $( "#form-search" ).autocomplete({
         source: tags,
         focus: function( e, ui ) {
-          $( "#form-search" ).val( ui.item.question );
+          $( "#form-search" ).val( ui.item.question + ui.item.label + ui.item.content + ui.item.keywords );
           return false;
         },
         select: function(e, ui) { 
