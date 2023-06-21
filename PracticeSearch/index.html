@@ -44,12 +44,13 @@
           var line = lines[i].trim();
           if (line !== "") {
             var values = line.split(",");
-            if (values.length === 4) {
+            if (values.length === 5) {
               var item = {
-                label: values[0].trim(),
-                question: values[1].trim(),
-                content: values[2].trim(),
-                keywords: values[3].trim()
+                search: values[0].trim(),
+                label: values[1].trim(),
+                question: values[2].trim(),
+                content: values[3].trim(),
+                keywords: values[4].trim()
               };
               availableTags.push(item);
             }
@@ -63,7 +64,7 @@
         $( "#form-search" ).autocomplete({
           source: tags,
           focus: function( e, ui ) {
-            $( "#form-search" ).val( ui.item.question );
+            $( "#form-search" ).val( ui.item.label );
             return false;
           },
           select: function(e, ui) { 
@@ -78,7 +79,7 @@
         })
         .autocomplete("instance")._renderItem = function( ul, item ) {
           return $( "<li></li>" )
-          .append( "<a>" + item.question + "</a>" )
+          .append( "<a>" + item.label + "</a>" )
           .appendTo( ul );
         };
       }
@@ -121,6 +122,7 @@
   <div class="FAQs">
     <p class="FAQ_title">What is this page?</p>
     <p>This is a search bar designed by and for educators to find and implement practices to support student success. Many practices are still in development, and we would appreciate any feedback at <a href="#">this link</a>.</p>
+    <p>Version 0.0.1</p>
   </div>
 
 </body>
