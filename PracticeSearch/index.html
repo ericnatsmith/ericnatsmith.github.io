@@ -16,97 +16,103 @@
     }
   </style>
   <script>
-    $(function() {
-      $.ajax({
-        url: "practices.csv",
-        dataType: "text",
-        success: function(data) {
-          var availableTags = parseCSV(data);
-          initializeAutocomplete(availableTags);
-        }
-      });
-
-      function parseCSV(csv) {
-        var lines = csv.split("\n");
-        var result = [];
-        var headers = lines[0].split(",");
-        for (var i = 1; i < lines.length; i++) {
-          var obj = {};
-          var currentline = lines[i].split(",");
-          for (var j = 0; j < headers.length; j++) {
-            obj[headers[j].trim()] = currentline[j].trim();
-          }
-          result.push(obj);
-        }
-        return result;
-      }
-
-      function initializeAutocomplete(data) {
-        $("#form-search").autocomplete({
-          source: data,
-          focus: function(e, ui) {
-            $("#form-search").val(ui.item.question);
-            return false;
-          },
-          select: function(e, ui) {
-            $("#practice-title").html("<h2> Example Practice: " + ui.item.label + "</h2>").show();
-            $("#full-label").html(ui.item.content +
-              "</br></br><i>Click <u>here</u> if you would like to learn more about this practice" +
-              "</br></br><i>Click <u>here</u> if you would like a different practice that addresses the question:</br>" + ui.item.question).show();
-            $("#form-search").val('');
-            return false;
-          }
-        }).autocomplete("instance")._renderItem = function(ul, item) {
-          return $("<li></li>")
-            .append("<a>" + item.question + "</a>")
-            .appendTo(ul);
-        };
+  $(function() {
+    $.ajax({
+      type: "GET",
+      url: "practices.csv",
+      dataType: "text",
+      success: function(data) {
+        parseCSV(data);
       }
     });
+
+    function parseCSV(csvData) {
+      var lines = csvData.split("\n");
+      var availableTags = [];
+
+      for (var i = 1; i < lines.length; i++) {
+        var line = lines[i].trim();
+        if (line !== "") {
+          var values = line.split(",");
+          if (values.length === 4) {
+            var item = {
+              label: values[0].trim(),
+              question: values[1].trim(),
+              content: values[2].trim(),
+              keywords: values[3].trim()
+            };
+            availableTags.push(item);
+          }
+        }
+      }
+
+      $( "#form-search" ).autocomplete({
+        source: availableTags,
+        focus: function( e, ui ) {
+          $( "#form-search" ).val( ui.item.question );
+          return false;
+        },
+        select: function(e, ui) { 
+          $( "#practice-title" ).html("<h2> Example Practice: " + ui.item.label + "</h2>").show();
+
+          $( "#full-label" ).html(ui.item.content + 
+            "<br><br><i>Click <u>here</u> if you would like to learn more about this practice" + 
+            "<br><br><i>Click <u>here</u> if you would like a different practice that addresses the question:<br>" + ui.item.question).show();
+          $( "#form-search" ).val('');
+          return false;
+        }
+      })
+      .autocomplete("instance")._renderItem = function( ul, item ) {
+        return $( "<li></li>" )
+          .append( "<a>" + item.question + "</a>" )
+          .appendTo( ul );
+      };
+    }
+  });
   </script>
 </head>
 <body>
+ 
+  <header>
+    <nav>
+      <ul id="nav_bar">
+        <li class="nav-links" id="STEMx"><a href="https://cns.utexas.edu/">Curated by the Office of STEM Education Excellence, UT Austin</a></li>
+      </ul>  
+    </nav>  
+  </header>  
+    
+  <!-- GOOGLE IMG -->  
+  <div class="google">
+    <p id="google_logo">Student Success Practice Finder</p>
+  </div>
+    
+  <!-- FORM SEARCH -->  
+  <div class="form">  
+    <form>
+      <label for="form-search"></label>
+      <input type="text" id="form-search" placeholder="Search by keyword. For example 'belonging' or 'test anxiety'">
+    </form>
+  </div>  
 
-<header>
-  <nav>
-    <ul id="nav_bar">
-      <li class="nav-links" id="STEMx"><a href="https://cns.utexas.edu/">Curated by the Office of STEM Education Excellence, UT Austin</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Display Full Label -->
+  <div class="FAQs">
+    <p id="practice-title" class="FAQ_title"></p>
+    <div id="full-label"></div>
+  </div>
+    
+  <!-- BUTTONS -->
+  <div class="buttons">  
+    <form action="PageNotFound.html" method="get" target="_blank">
+      <input type="submit" value="My question isn't here..." id="submit1">    
+      <input type="submit" value="Contribute!" id="submit2">
+      <input type="submit" value="Report a broken link" id="submit3">
+    </form>
+  </div>
 
-<!-- GOOGLE IMG -->
-<div class="google">
-  <p id="google_logo">Student Success Practice Finder</p>
-</div>
-
-<!-- FORM SEARCH -->
-<div class="form">
-  <form>
-    <label for="form-search"></label>
-    <input type="text" id="form-search" placeholder="Search by keyword. For example 'belonging' or 'test anxiety'">
-  </form>
-</div>
-
-<!-- Display Full Label -->
-<div class="FAQs">
-  <p id="practice-title" class="FAQ_title"></p>
-  <div id="full-label"></div>
-</div>
-
-<!-- BUTTONS -->
-<div class="buttons">
-  <form action="PageNotFound.html" method="get" target="_blank">
-    <input type="submit" value="My question isn't here..." id="submit1">
-    <input type="submit" value="Contribute!" id="submit2">
-    <input type="submit" value="Report a broken link" id="submit3">
-  </form>
-</div>
-
-<div class="FAQs">
-  <p class="FAQ_title">What is this page?</p>
-  <p>This is a search bar designed by and for educators to find and implement practices to support student success. Many practices are still in development, and we would appreciate any feedback at <a href="#">this link</a>.</p>
-</div>
-
+  <div class="FAQs">
+    <p class="FAQ_title">What is this page?</p>
+    <p>This is a search bar designed by and for educators to find and implement practices to support student success. Many practices are still in development, and we would appreciate any feedback at <a href="#">this link</a>.</p>
+  </div>
+      
 </body>
 </html>
