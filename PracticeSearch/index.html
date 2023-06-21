@@ -42,8 +42,6 @@
         var lines = data.split("\n");
     var headers = lines[0].split("\t"); // Use "\t" as the delimiter
 
-    var availableTags = [];
-
     for (var i = 1; i < lines.length; i++) {
       var line = lines[i].trim();
       if (line !== "") {
@@ -117,7 +115,7 @@
 
   <div class="google">
     <p id="google_logo">Student Success Practice Finder</p>
-    <p> v 0.0.2 </p>
+    <p> v 0.0.4 </p>
   </div>
 
   <div class="form">  
