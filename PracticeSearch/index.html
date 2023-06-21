@@ -16,27 +16,29 @@
     }
   </style>
   <script>
+    // Declare global variables
+  var csvData;
+  var availableTags = [];
+
   $(function() {
-   var csvData;
-   $.ajax({
+    $.ajax({
       type: "GET",
       url: "practices.csv",
       dataType: "text",
       success: function(data) {
-         console.log("CSV file loaded successfully.");
-         csvData = data;
-         parseCSV(csvData);
+        console.log("CSV file loaded successfully.");
+        csvData = data;
+        parseCSV(csvData);
       },
       error: function(xhr, status, error) {
-         console.error("Failed to load CSV file:", error);
+        console.error("Failed to load CSV file:", error);
       }
-   });
+    });
 
-   function parseCSV(data) {
+    function parseCSV(data) {
       console.log("Parsing CSV data...");
       var lines = data.split("\n");
       console.log("Number of lines in CSV:", lines.length);
-      var availableTags = [];
 
       for (var i = 1; i < lines.length; i++) {
         var line = lines[i].trim();
