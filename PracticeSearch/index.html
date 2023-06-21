@@ -19,9 +19,7 @@
     var csvData;
     var availableTags = [];
 
-
     $(function() {
-
       $.ajax({
         type: "GET",
         url: "practices.csv",
@@ -66,14 +64,7 @@
         var matchedTags = [];
 
         tags.forEach(function(tag) {
-          var isMatched = false;
-          Object.values(tag).forEach(function(value) {
-            if (value.toLowerCase().indexOf(term) !== -1) {
-              isMatched = true;
-              return;
-            }
-          });
-          if (isMatched) {
+          if (tag.label.toLowerCase().indexOf(term) !== -1 || tag.question.toLowerCase().indexOf(term) !== -1) {
             matchedTags.push(tag);
           }
         });
@@ -96,11 +87,12 @@
     })
     .autocomplete("instance")._renderItem = function( ul, item ) {
       return $( "<li></li>" )
-      .append( "<a>" + item.question + "</a>" )
-      .appendTo( ul );
-    };
-  }
-});
+        .append( "<a>" + item.label + "</a>" ) // Display the "label" property instead of "question"
+        .appendTo( ul );
+      };
+    }
+  });
+
 
 </script>
 </head>
@@ -115,7 +107,7 @@
 
   <div class="google">
     <p id="google_logo">Student Success Practice Finder</p>
-    <p> v 0.0.4 </p>
+    <p> v 0.0.5</p>
   </div>
 
   <div class="form">  
