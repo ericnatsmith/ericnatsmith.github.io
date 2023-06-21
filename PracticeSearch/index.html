@@ -63,26 +63,41 @@
       }
 
       function initializeAutocomplete(tags) {
-        $( "#form-search" ).autocomplete({
-          source: tags,
-          focus: function( e, ui ) {
-            $( "#form-search" ).val( ui.item.search );
+        $("#form-search").autocomplete({
+          source: function(request, response) {
+            var term = request.term.toLowerCase();
+            var matchedTags = [];
+
+            tags.forEach(function(tag) {
+              if (tag.search.toLowerCase().indexOf(term) !== -1) {
+                matchedTags.push(tag);
+              }
+            });
+
+            response(matchedTags);
+          },
+          focus: function(e, ui) {
+            $("#form-search").val(ui.item.search);
             return false;
           },
-          select: function(e, ui) { 
-            $( "#practice-title" ).html("<h2> Example Practice: " + ui.item.label + "</h2>").show();
+          select: function(e, ui) {
+            $("#practice-title").html("<h2> Example Practice: " + ui.item.label + "</h2>").show();
 
-            $( "#full-label" ).html(ui.item.content + 
-              "<br><br><i>Click <u>here</u> if you would like to learn more about this practice" + 
-              "<br><br><i>Click <u>here</u> if you would like a different practice that addresses the question:<br>" + ui.item.question).show();
-            $( "#form-search" ).val('');
+            $("#full-label").html(
+              ui.item.content +
+              "<br><br><i>Click <u>here</u> if you would like to learn more about this practice" +
+              "<br><br><i>Click <u>here</u> if you would like a different practice that addresses the question:<br>" +
+              ui.item.question
+              ).show();
+
+            $("#form-search").val('');
             return false;
           }
         })
-        .autocomplete("instance")._renderItem = function( ul, item ) {
-          return $( "<li></li>" )
-          .append( "<a>" + item.label + "</a>" )
-          .appendTo( ul );
+        .autocomplete("instance")._renderItem = function(ul, item) {
+          return $("<li></li>")
+          .append("<a>" + item.label + "</a>")
+          .appendTo(ul);
         };
       }
 
