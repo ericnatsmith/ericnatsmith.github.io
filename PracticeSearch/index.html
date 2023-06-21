@@ -36,65 +36,54 @@
 
       function parseCSV(data) {
         console.log("Parsing CSV data...");
-
         var lines = data.split("\n");
-    var headers = lines[0].split("\t"); // Use "\t" as the delimiter
+        console.log("Number of lines in CSV:", lines.length);
 
-    for (var i = 1; i < lines.length; i++) {
-      var line = lines[i].trim();
-      if (line !== "") {
-        var values = line.split("\t"); // Use "\t" as the delimiter
-        if (values.length === headers.length) {
-          var item = {};
-          for (var j = 0; j < headers.length; j++) {
-            item[headers[j].trim()] = values[j].trim();
+
+        for (var i = 1; i < lines.length; i++) {
+          var line = lines[i].trim();
+          if (line !== "") {
+            var values = line.split(",");
+            if (values.length === 4) {
+              var item = {
+                label: values[0].trim(),
+                question: values[1].trim(),
+                content: values[2].trim(),
+                keywords: values[3].trim()
+              };
+              availableTags.push(item);
+            }
           }
-          availableTags.push(item);
         }
+
+        initializeAutocomplete(availableTags);
       }
-    }
 
-    initializeAutocomplete(availableTags);
-  }
+      function initializeAutocomplete(tags) {
+        $( "#form-search" ).autocomplete({
+          source: tags,
+          focus: function( e, ui ) {
+            $( "#form-search" ).val( ui.item.question );
+            return false;
+          },
+          select: function(e, ui) { 
+            $( "#practice-title" ).html("<h2> Example Practice: " + ui.item.label + "</h2>").show();
 
-  function initializeAutocomplete(tags) {
-    $( "#form-search" ).autocomplete({
-      source: function(request, response) {
-        var term = request.term.toLowerCase();
-        var matchedTags = [];
-
-        tags.forEach(function(tag) {
-          if (tag.label.toLowerCase().indexOf(term) !== -1 || tag.question.toLowerCase().indexOf(term) !== -1) {
-            matchedTags.push(tag);
+            $( "#full-label" ).html(ui.item.content + 
+              "<br><br><i>Click <u>here</u> if you would like to learn more about this practice" + 
+              "<br><br><i>Click <u>here</u> if you would like a different practice that addresses the question:<br>" + ui.item.question).show();
+            $( "#form-search" ).val('');
+            return false;
           }
-        });
-
-        response(matchedTags);
-      },
-      focus: function( e, ui ) {
-        $( "#form-search" ).val( ui.item.question );
-        return false;
-      },
-      select: function(e, ui) { 
-        $( "#practice-title" ).html("<h2> Example Practice: " + ui.item.label + "</h2>").show();
-
-        $( "#full-label" ).html(ui.item.content + 
-          "<br><br><i>Click <u>here</u> if you would like to learn more about this practice" + 
-          "<br><br><i>Click <u>here</u> if you would like a different practice that addresses the question:<br>" + ui.item.question).show();
-        $( "#form-search" ).val('');
-        return false;
+        })
+        .autocomplete("instance")._renderItem = function( ul, item ) {
+          return $( "<li></li>" )
+          .append( "<a>" + item.question + "</a>" )
+          .appendTo( ul );
+        };
       }
-    })
-    .autocomplete("instance")._renderItem = function( ul, item ) {
-      return $( "<li></li>" )
-        .append( "<a>" + item.label + "</a>" ) // Display the "label" property instead of "question"
-        .appendTo( ul );
-      };
-    }
-  });
-
-
-</script>
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -107,7 +96,6 @@
 
   <div class="google">
     <p id="google_logo">Student Success Practice Finder</p>
-    <p> v 0.0.5</p>
   </div>
 
   <div class="form">  
