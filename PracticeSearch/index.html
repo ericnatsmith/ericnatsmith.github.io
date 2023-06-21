@@ -16,11 +16,9 @@
     }
   </style>
   <script>
-    // Declare global variables
-  var csvData;
-  var availableTags = [];
-
   $(function() {
+    var csvData;
+
     $.ajax({
       type: "GET",
       url: "practices.csv",
@@ -40,6 +38,8 @@
       var lines = data.split("\n");
       console.log("Number of lines in CSV:", lines.length);
 
+      var availableTags = [];
+
       for (var i = 1; i < lines.length; i++) {
         var line = lines[i].trim();
         if (line !== "") {
@@ -56,8 +56,12 @@
         }
       }
 
+      initializeAutocomplete(availableTags);
+    }
+
+    function initializeAutocomplete(tags) {
       $( "#form-search" ).autocomplete({
-        source: availableTags,
+        source: tags,
         focus: function( e, ui ) {
           $( "#form-search" ).val( ui.item.question );
           return false;
@@ -82,7 +86,6 @@
   </script>
 </head>
 <body>
- 
   <header>
     <nav>
       <ul id="nav_bar">
@@ -91,12 +94,10 @@
     </nav>  
   </header>  
     
-  <!-- GOOGLE IMG -->  
   <div class="google">
     <p id="google_logo">Student Success Practice Finder</p>
   </div>
     
-  <!-- FORM SEARCH -->  
   <div class="form">  
     <form>
       <label for="form-search"></label>
@@ -104,13 +105,11 @@
     </form>
   </div>  
 
-  <!-- Display Full Label -->
   <div class="FAQs">
     <p id="practice-title" class="FAQ_title"></p>
     <div id="full-label"></div>
   </div>
     
-  <!-- BUTTONS -->
   <div class="buttons">  
     <form action="PageNotFound.html" method="get" target="_blank">
       <input type="submit" value="My question isn't here..." id="submit1">    
