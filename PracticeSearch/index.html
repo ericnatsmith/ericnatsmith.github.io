@@ -36,22 +36,21 @@
 
       function parseCSV(data) {
         console.log("Parsing CSV data...");
-        var lines = data.split("\n");
-        console.log("Number of lines in CSV:", lines.length);
 
+        var lines = data.split("\n");
+        var headers = lines[0].split(","); // Use "\t" as the delimiter
+
+        var availableTags = [];
 
         for (var i = 1; i < lines.length; i++) {
           var line = lines[i].trim();
           if (line !== "") {
-            var values = line.split(",");
-            if (values.length === 5) {
-              var item = {
-                search: values[0].trim(),
-                label: values[1].trim(),
-                question: values[2].trim(),
-                content: values[3].trim(),
-                keywords: values[4].trim()
-              };
+            var values = line.split(","); // Use "\t" as the delimiter
+            if (values.length === headers.length) {
+              var item = {};
+              for (var j = 0; j < headers.length; j++) {
+                item[headers[j].trim()] = values[j].trim();
+              }
               availableTags.push(item);
             }
           }
@@ -86,6 +85,21 @@
           .appendTo( ul );
         };
       }
+
+      function populateQuestionDropdown(tags) {
+        var questions = tags.map(function(tag) {
+          return tag.question;
+        });
+
+        var uniqueQuestions = [...new Set(questions)]; // Get unique questions
+
+        var selectDropdown = $("#question-dropdown");
+
+        uniqueQuestions.forEach(function(question) {
+          var option = $("<option>").val(question).text(question);
+          selectDropdown.append(option);
+        });
+      }
     });
   </script>
 </head>
@@ -102,12 +116,12 @@
     <p id="google_logo">Student Success Practice Finder</p>
   </div>
 
-  <div class="dropdown">
-  <label for="question-dropdown">Search by your goal:</label>
-  <select id="question-dropdown">
-    <option value="">All Questions</option>
-  </select>
-</div>
+  <div class="dropdown FAQs">
+    <label for="question-dropdown">Search by your goal:</label>
+    <select id="question-dropdown">
+      <option value="">All Questions</option>
+    </select>
+  </div>
 
   <div class="form">  
     <form>
