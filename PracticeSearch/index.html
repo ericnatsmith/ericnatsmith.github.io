@@ -17,17 +17,25 @@
   </style>
   <script>
   $(function() {
-    $.ajax({
+   var csvData;
+   $.ajax({
       type: "GET",
       url: "practices.csv",
       dataType: "text",
       success: function(data) {
-        parseCSV(data);
+         console.log("CSV file loaded successfully.");
+         csvData = data;
+         parseCSV(csvData);
+      },
+      error: function(xhr, status, error) {
+         console.error("Failed to load CSV file:", error);
       }
-    });
+   });
 
-    function parseCSV(csvData) {
-      var lines = csvData.split("\n");
+   function parseCSV(data) {
+      console.log("Parsing CSV data...");
+      var lines = data.split("\n");
+      console.log("Number of lines in CSV:", lines.length);
       var availableTags = [];
 
       for (var i = 1; i < lines.length; i++) {
