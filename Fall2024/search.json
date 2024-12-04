@@ -1,0 +1,262 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CIPS Analysis Report - Fall 2024",
+    "section": "",
+    "text": "Preface\nThis report presents a comprehensive analysis of data collected on STEM instructional practices during the Fall 2024 semester. The aim is to provide insights into the effectiveness of various teaching methods and strategies employed in STEM education. Through detailed statistical analyses and visualizations, this report seeks to inform educators, policymakers, and researchers about the current state of STEM instruction and identify areas for improvement.\nYou can select a relevant section to explore to the left. Then, you will see a table of contexts to the right that you can explore further.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "20-methods.html",
+    "href": "20-methods.html",
+    "title": "1  Methods",
+    "section": "",
+    "text": "1.1 Participants by course\nThere were 3697 unique students across 49 course/groups with 23 instructors participating.\nBelow you can find a table of how many students completed surveys 1 and 2",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Methods</span>"
+    ]
+  },
+  {
+    "objectID": "20-methods.html#demographics",
+    "href": "20-methods.html#demographics",
+    "title": "1  Methods",
+    "section": "1.2 Demographics",
+    "text": "1.2 Demographics\nBelow you can find various demographic tables\n\n\n\n\n\nCollege Type\nCount\nPercent\n\n\n\n\nPWI\n3697\n100%\n\n\n\n\n\n\n\n\n\n\nGender\nCount\nPercent\n\n\n\n\nMale\n1270\n34.4%\n\n\nFemale\n2181\n59%\n\n\nTrans/Nonbinary/NotAnswered\n141\n3.8%\n\n\nNA\n105\n2.8%\n\n\n\n\n\n\n\n\n\n\nURM\nCount\nPercent\n\n\n\n\n0\n2476\n67%\n\n\n1\n1221\n33%\n\n\n\n\n\n\n\n\n\n\nFirst-Generation\nCount\nPercent\n\n\n\n\n0\n2886\n78.1%\n\n\n1\n811\n21.9%\n\n\n\n\n\n\n\n\n\n\nPell Elligible\nCount\nPercent\n\n\n\n\nYes\n1033\n27.9%\n\n\nNo, I am not eligible\n2097\n56.7%\n\n\nNo, I am eligible but did not receive it\n80\n2.2%\n\n\nI don’t know\n383\n10.4%\n\n\nNA\n104\n2.8%\n\n\n\n\n\n\n\n\n\n\nEnglish First Language\nCount\nPercent\n\n\n\n\nNo. If not, what was your first language?\n815\n22%\n\n\nYes\n2783\n75.3%\n\n\nNA\n99\n2.7%",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Methods</span>"
+    ]
+  },
+  {
+    "objectID": "20-methods.html#how-long-did-the-survey-take",
+    "href": "20-methods.html#how-long-did-the-survey-take",
+    "title": "1  Methods",
+    "section": "1.3 How long did the survey take?",
+    "text": "1.3 How long did the survey take?",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Methods</span>"
+    ]
+  },
+  {
+    "objectID": "30-practice-overview.html",
+    "href": "30-practice-overview.html",
+    "title": "2  Overview of Practices",
+    "section": "",
+    "text": "2.1 Table of “Goodness”\nWe create a table of practice information\nConsistency of reporting within courses - F-value across courses\n`summarise()` has grouped output by 'practice_id'. You can override using the\n`.groups` argument.\n`summarise()` has grouped output by 'practice_id'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 56 × 5\n# Groups:   practice_id [56]\n   practice_id practice_wording    instr_occurance_perc…¹ instr_prioritize_per…²\n   &lt;chr&gt;       &lt;chr&gt;                                &lt;dbl&gt;                  &lt;dbl&gt;\n 1 A1.1        State that all stu…                  0.957                  0.435\n 2 A1.2        Describe how stude…                  0.652                  0.391\n 3 A1.3        Explain that stude…                  0.783                  0.565\n 4 A1.4        Celebrate how much…                  0.522                  0.478\n 5 A10.1       Refer to students …                  0.478                  0.217\n 6 A10.2       Encourage students…                  0.348                  0.217\n 7 A10.3       Help students make…                  0.913                  0.435\n 8 A10.4       Clarify how the sk…                  0.739                  0.478\n 9 A11.1       Incorporate real-w…                  0.957                  0.609\n10 A11.2       Incorporate studen…                  0.739                  0.391\n# ℹ 46 more rows\n# ℹ abbreviated names: ¹​instr_occurance_percent, ²​instr_prioritize_percent\n# ℹ 1 more variable: instr_response_char &lt;dbl&gt;\n\n\n`summarise()` has grouped output by 'practice_id', 'practice_wording',\n'inst_practice_YN'. You can override using the `.groups` argument.\n`summarise()` has grouped output by 'practice_id', 'practice_wording'. You can\noverride using the `.groups` argument.\nJoining with `by = join_by(practice_id, practice_wording)`\nJoining with `by = join_by(practice_id, practice_wording)`\nLooking at the data another way (not searchable)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview of Practices</span>"
+    ]
+  },
+  {
+    "objectID": "30-practice-overview.html#table-of-goodness",
+    "href": "30-practice-overview.html#table-of-goodness",
+    "title": "2  Overview of Practices",
+    "section": "",
+    "text": "occurrence Percent of students reporting the practice occurred\nimpact_rating Mean rating (1-5) of how impactful the practice was IF they said practice occurred\nhigh_impact Percent of students who put the practice was “Extremely Important” (5 of 5)\nfrequency_more_than_1_per_month Percent of the practice being frequent (“About 2-3 times per month” or “At least 1 time per week”)\noccurrence_this_week Percent of students reporting it had occurred in the past week.\noccurrence_inst_report Percent of instructors reporting “Yes”\noccurence_inst_NO Percent of students reporting (if instructor “No”) -\noccurence_inst_YES Percent of students reporting (if instructor “Yes”) -\noccurence_inst_signal Difference in student reporting when instructor says YES or NO\nICC Intraclass Correlation Coefficient\nConsistency\nF-value\n\n\n\n\n\n::: {#issue-s2-YN .issue}\n**Issue: Session 2 YN column**\n\nThere is something screwy with the YN practices column\n:::",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview of Practices</span>"
+    ]
+  },
+  {
+    "objectID": "30-practice-overview.html#limited-by-first-gen-and-underrepresented",
+    "href": "30-practice-overview.html#limited-by-first-gen-and-underrepresented",
+    "title": "2  Overview of Practices",
+    "section": "2.2 Limited by first-gen and underrepresented",
+    "text": "2.2 Limited by first-gen and underrepresented\n\n\n`summarise()` has grouped output by 'practice_id'. You can override using the\n`.groups` argument.\n`summarise()` has grouped output by 'practice_id'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 56 × 5\n# Groups:   practice_id [56]\n   practice_id practice_wording    instr_occurance_perc…¹ instr_prioritize_per…²\n   &lt;chr&gt;       &lt;chr&gt;                                &lt;dbl&gt;                  &lt;dbl&gt;\n 1 A1.1        State that all stu…                  0.957                  0.435\n 2 A1.2        Describe how stude…                  0.652                  0.391\n 3 A1.3        Explain that stude…                  0.783                  0.565\n 4 A1.4        Celebrate how much…                  0.522                  0.478\n 5 A10.1       Refer to students …                  0.478                  0.217\n 6 A10.2       Encourage students…                  0.348                  0.217\n 7 A10.3       Help students make…                  0.913                  0.435\n 8 A10.4       Clarify how the sk…                  0.739                  0.478\n 9 A11.1       Incorporate real-w…                  0.957                  0.609\n10 A11.2       Incorporate studen…                  0.739                  0.391\n# ℹ 46 more rows\n# ℹ abbreviated names: ¹​instr_occurance_percent, ²​instr_prioritize_percent\n# ℹ 1 more variable: instr_response_char &lt;dbl&gt;\n\n\n`summarise()` has grouped output by 'practice_id', 'practice_wording',\n'inst_practice_YN'. You can override using the `.groups` argument.\n`summarise()` has grouped output by 'practice_id', 'practice_wording'. You can\noverride using the `.groups` argument.\nJoining with `by = join_by(practice_id, practice_wording)`\nJoining with `by = join_by(practice_id, practice_wording)`",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview of Practices</span>"
+    ]
+  },
+  {
+    "objectID": "30-practice-overview.html#ranking-items",
+    "href": "30-practice-overview.html#ranking-items",
+    "title": "2  Overview of Practices",
+    "section": "2.3 Ranking items",
+    "text": "2.3 Ranking items\nWe also sort based on what makes a “good” item. I used the following criteria as a first pass: - students find impactful Do students find the practice impactful? (&lt;25th %ile = 0 point; 25th-75th %ile = 1 points, 75-90%ile = 2 points; &gt;90%ile = 3 points)  - Is it significantly more important to marginalized students? (No = 0 points; Yes = 2 points) - is there consistency of student-reports within courses? (&lt;25th %ile = 0 point; 25th-75th %ile = 1 points, &gt;75%ile = 2 points) - is there a signal across courses? (non-significant F-value = 0 point; &lt;75%ile sig F-value = 1 point, &gt;75%ile = 2 points) - does it predict student experiences? - students want instructors to prioritize (NEED TO ADD IN IMPORTANCE) - signal by instructor Are there positive differences in student reports when instructors do or do not report a practice? (&lt;= 0 difference = -1 points; 0-.10 = 0 points; .10-.20 = 1 point; .20-.30 = 2 points; .30-.40 = 4 points; etc.) - In what percent of courses is there significant change?* p&lt;.05 and shift of &gt; 10% in student responses. ( Determine criteria)",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview of Practices</span>"
+    ]
+  },
+  {
+    "objectID": "30-practice-overview.html#aggregate-correlation-between-variables-by-practice",
+    "href": "30-practice-overview.html#aggregate-correlation-between-variables-by-practice",
+    "title": "2  Overview of Practices",
+    "section": "2.4 Aggregate correlation between variables by practice",
+    "text": "2.4 Aggregate correlation between variables by practice",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview of Practices</span>"
+    ]
+  },
+  {
+    "objectID": "31-practice-deepdive.html",
+    "href": "31-practice-deepdive.html",
+    "title": "3  Practice-level Info",
+    "section": "",
+    "text": "3.1 A1.1: Description for A1.1\nBelow you can find a lot of relevant informaiton and figures for each practice collected. You can use the Table of contents to the right to select any practice of interest",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Practice-level Info</span>"
+    ]
+  },
+  {
+    "objectID": "31-practice-deepdive.html#a1.1-description-for-a1.1",
+    "href": "31-practice-deepdive.html#a1.1-description-for-a1.1",
+    "title": "3  Practice-level Info",
+    "section": "",
+    "text": "Warning: Removed 1709 rows containing non-finite outside the scale range\n(`stat_bin()`).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Practice-level Info</span>"
+    ]
+  },
+  {
+    "objectID": "31-practice-deepdive.html#a1.2-description-for-a1.2",
+    "href": "31-practice-deepdive.html#a1.2-description-for-a1.2",
+    "title": "3  Practice-level Info",
+    "section": "3.2 A1.2: Description for A1.2",
+    "text": "3.2 A1.2: Description for A1.2\nWarning: Removed 1708 rows containing non-finite outside the scale range\n(`stat_bin()`).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Practice-level Info</span>"
+    ]
+  },
+  {
+    "objectID": "31-practice-deepdive.html#a2.1-demonstrate-how-mistakes-can-be-valuable-learning-opportunities-for-the-class",
+    "href": "31-practice-deepdive.html#a2.1-demonstrate-how-mistakes-can-be-valuable-learning-opportunities-for-the-class",
+    "title": "3  Practice-level Info",
+    "section": "3.3 A2.1: Demonstrate how mistakes can be valuable learning opportunities for the class",
+    "text": "3.3 A2.1: Demonstrate how mistakes can be valuable learning opportunities for the class",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Practice-level Info</span>"
+    ]
+  },
+  {
+    "objectID": "31-practice-deepdive.html#a2.2-description-for-a2.2",
+    "href": "31-practice-deepdive.html#a2.2-description-for-a2.2",
+    "title": "3  Practice-level Info",
+    "section": "3.4 A2.2: Description for A2.2",
+    "text": "3.4 A2.2: Description for A2.2",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Practice-level Info</span>"
+    ]
+  },
+  {
+    "objectID": "40-grouping-practices.html",
+    "href": "40-grouping-practices.html",
+    "title": "4  Grouping practices together",
+    "section": "",
+    "text": "4.1 Eric’s grouping\nThere are a few ways we might consider grouping practices together. Below we present some of these ways:",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grouping practices together</span>"
+    ]
+  },
+  {
+    "objectID": "40-grouping-practices.html#erics-grouping",
+    "href": "40-grouping-practices.html#erics-grouping",
+    "title": "4  Grouping practices together",
+    "section": "",
+    "text": "4.1.1 Correlation matrix of unordered practices\nBelow, you’ll see some evidence that those items within the same group are more highly correlated. However, this could be an artifact of those items being presented on the same page to reduce student cognitive load.\nYou can zoom in on the graph below, or double-click to zoom out. On hover, you can see the pearson correlation between practice reporting.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grouping practices together</span>"
+    ]
+  },
+  {
+    "objectID": "40-grouping-practices.html#exploratory-factor-analysis",
+    "href": "40-grouping-practices.html#exploratory-factor-analysis",
+    "title": "4  Grouping practices together",
+    "section": "4.2 Exploratory Factor Analysis",
+    "text": "4.2 Exploratory Factor Analysis\n\n\n\n\n\n\n\n\n\n [1] 0.270006424 0.044206409 0.040312303 0.031324576 0.029692238 0.026716939\n [7] 0.024923457 0.023135994 0.021481545 0.020739871 0.019555234 0.018382382\n[13] 0.018037593 0.017199963 0.016837548 0.015573880 0.014898576 0.014565381\n[19] 0.013608082 0.013550650 0.013233043 0.012753151 0.012430740 0.012118934\n[25] 0.012082542 0.011806326 0.011422859 0.011155664 0.011137007 0.010722593\n[31] 0.010216902 0.010056583 0.009956343 0.009703510 0.009158707 0.008845575\n[37] 0.008526904 0.008267669 0.008240047 0.007961774 0.007734795 0.007608682\n[43] 0.007275983 0.007115607 0.006941772 0.006446041 0.006309178 0.006161414\n[49] 0.005871386 0.005689742 0.005368092 0.005113521 0.004790790 0.004556308\n[55] 0.004463948 0.004006823\n\n\nLoading required namespace: GPArotation\n\n\n\nLoadings:\n      MR1   MR3   MR2  \nA1.1                   \nA1.2   0.44            \nA1.3                   \nA1.4                   \nA2.1                   \nA2.2                   \nA2.3               0.36\nA2.4   0.37        0.35\nA3.1         0.63      \nA3.2         0.56      \nA3.3         0.49      \nA3.4         0.69      \nA4.1         0.38      \nA4.2                   \nA4.3                   \nA4.4   0.53            \nA5.1               0.39\nA5.2               0.47\nA5.3               0.54\nA5.4   0.37        0.38\nA6.1         0.46      \nA6.2                   \nA6.3         0.36      \nA6.4   0.32            \nA7.1   0.47            \nA7.2   0.41            \nA7.3   0.61            \nA7.4         0.32      \nA8.1   0.43            \nA8.2   0.55            \nA8.3   0.61            \nA8.4   0.52            \nA9.1   0.72            \nA9.2   0.62            \nA9.3   0.60            \nA9.4   0.69            \nA10.1  0.49            \nA10.2  0.58            \nA10.3  0.46            \nA10.4  0.50            \nA11.1        0.46      \nA11.2  0.53            \nA11.3  0.44            \nA11.4  0.60            \nA12.1        0.39      \nA12.2        0.34      \nA12.3  0.56            \nA12.4  0.68            \nA13.1              0.38\nA13.2        0.44      \nA13.3        0.49      \nA13.4  0.32            \nA14.1                  \nA14.2  0.37            \nA14.3  0.33            \nA14.4                  \n\n                MR1  MR3  MR2\nSS loadings    8.61 4.01 2.36\nProportion Var 0.15 0.07 0.04\nCumulative Var 0.15 0.23 0.27\n\n\n\n4.2.0.1 Try hover text",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grouping practices together</span>"
+    ]
+  },
+  {
+    "objectID": "40-grouping-practices.html#eric-stopped-here",
+    "href": "40-grouping-practices.html#eric-stopped-here",
+    "title": "4  Grouping practices together",
+    "section": "4.3 ERIC STOPPED HERE",
+    "text": "4.3 ERIC STOPPED HERE",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grouping practices together</span>"
+    ]
+  },
+  {
+    "objectID": "40-grouping-practices.html#collapsing-across-classrooms-do-experiences-groupings-similarly-hold",
+    "href": "40-grouping-practices.html#collapsing-across-classrooms-do-experiences-groupings-similarly-hold",
+    "title": "4  Grouping practices together",
+    "section": "4.4 Collapsing across classrooms, do experiences groupings similarly hold?",
+    "text": "4.4 Collapsing across classrooms, do experiences groupings similarly hold?",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grouping practices together</span>"
+    ]
+  },
+  {
+    "objectID": "40-grouping-practices.html#which-experiences-predict-behavioral-outcomes-bcf",
+    "href": "40-grouping-practices.html#which-experiences-predict-behavioral-outcomes-bcf",
+    "title": "4  Grouping practices together",
+    "section": "4.5 Which experiences predict behavioral outcomes? (BCF)",
+    "text": "4.5 Which experiences predict behavioral outcomes? (BCF)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grouping practices together</span>"
+    ]
+  },
+  {
+    "objectID": "80-practice-open-responses.html",
+    "href": "80-practice-open-responses.html",
+    "title": "5  Explore open responses",
+    "section": "",
+    "text": "5.1 Students’ descriptions of courses\nBelow you can find open-responses collected from instructors and students. Data has been limited to 1000 rows to reduce load on your browser.\nYou can click on the blue buttons below to see and search the responses.\nOther than the things you’ve already shared, is there anything else you do in your course that you think other instructors would be interested in? (e.g., something new you are trying, something you are proud of, etc.). If so, please describe below.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Explore open responses</span>"
+    ]
+  },
+  {
+    "objectID": "80-practice-open-responses.html#students-descriptions-of-courses",
+    "href": "80-practice-open-responses.html#students-descriptions-of-courses",
+    "title": "5  Explore open responses",
+    "section": "",
+    "text": "Show/Hide Responses",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Explore open responses</span>"
+    ]
+  },
+  {
+    "objectID": "80-practice-open-responses.html#students-practice-responses",
+    "href": "80-practice-open-responses.html#students-practice-responses",
+    "title": "5  Explore open responses",
+    "section": "5.2 Students’ practice responses",
+    "text": "5.2 Students’ practice responses\nWe asked students:\n\nShow/Hide Responses with Practice Info\n\n\nShow/Hide Responses Only",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Explore open responses</span>"
+    ]
+  },
+  {
+    "objectID": "80-practice-open-responses.html#students-additional-comments-on-course",
+    "href": "80-practice-open-responses.html#students-additional-comments-on-course",
+    "title": "5  Explore open responses",
+    "section": "5.3 Students’ additional comments on course",
+    "text": "5.3 Students’ additional comments on course\n\nShow/Hide Responses\n\n\n\n\n\n\n\n\n\n5.4 Instructors’ prioritized practices\n\nShow/Hide Responses",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Explore open responses</span>"
+    ]
+  },
+  {
+    "objectID": "80-practice-open-responses.html#instructors-prioritized-practices",
+    "href": "80-practice-open-responses.html#instructors-prioritized-practices",
+    "title": "5  Explore open responses",
+    "section": "5.4 Instructors’ prioritized practices",
+    "text": "5.4 Instructors’ prioritized practices\n\nShow/Hide Responses",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Explore open responses</span>"
+    ]
+  },
+  {
+    "objectID": "96-codebook.html",
+    "href": "96-codebook.html",
+    "title": "6  Codebook",
+    "section": "",
+    "text": "Below is the survey codebooks\nBelow you will find relevant information about all variables in the datafiles:\n\nsource = Where did the column come from?\nvar_category = What category of data is it?\n\nID = identifiers\nSurvey Data = information about survey engagement and completion\nCondition = manipulated conditions\nDemographics = unique data linked to participant\nDemographics (Calculated) = unique data linked to participant; calculated or aggregate\nCourse Experience = Quantitative data on overall course experiences\nPersonal Beliefs = Quantitative data on general experiences\nPractices = The practices collected\n\nvar_type = What type of data is it?\nvar_original_name = The original variable name in cleaning files\nvar_original_name = The updated variable name in cleaning files\nvar_intro_wording (optional) = Wording provided to participant prior to completing the item\nvar_wording = Item wording provided to participant OR description of calculated variable\nvar_scale = Response scale information\nvar_notes (optional) = Any other relevant information about the variable\nvar_reference (unused at this time) = TBD\n\nYou can search using the search button in the top right. Example search terms:\n\n“logical” = find all binary T/F variables\n“Demographics” = find all demographic items collected\n“A14” = find all variables that start with A14\n\n\n\n\n\n\n\n\n6.0.1 Add some info about cols",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Codebook</span>"
+    ]
+  }
+]

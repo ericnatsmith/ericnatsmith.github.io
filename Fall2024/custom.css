@@ -1,0 +1,14 @@
+/* Style for .issue sections */
+.issue {
+    border: 2px solid #e63946; /* Red border */
+    background-color: #f8d7da; /* Light red background */
+    padding: 1em;
+    border-radius: 5px;
+    margin: 1em 0;
+}
+
+/* Optional: Style the title of the issue to stand out */
+.issue strong {
+    color: #e63946; /* Red color for the title */
+    font-weight: bold;
+}
