@@ -12,3 +12,8 @@
     color: #e63946; /* Red color for the title */
     font-weight: bold;
 }
+
+
+details summary > * {
+  display: inline;
+}

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "CIPS Analysis Report - Fall 2024",
     "section": "",
-    "text": "Preface\nThis report presents a comprehensive analysis of data collected on STEM instructional practices during the Fall 2024 semester. The aim is to provide insights into the effectiveness of various teaching methods and strategies employed in STEM education. Through detailed statistical analyses and visualizations, this report seeks to inform educators, policymakers, and researchers about the current state of STEM instruction and identify areas for improvement.\nYou can select a relevant section to explore to the left. Then, you will see a table of contexts to the right that you can explore further.",
+    "text": "Preface\nThis report presents analyses of data collected on STEM instructional practices during the Fall 2024 semester. The aim is to provide insights into the effectiveness of various teaching methods and strategies employed in STEM education.\nYou can select a relevant section to explore to the left. Then, you will see a table of contexts to the right that you can explore further.",
     "crumbs": [
       "Preface"
     ]
@@ -12,31 +12,11 @@
   {
     "objectID": "20-methods.html",
     "href": "20-methods.html",
-    "title": "1  Methods",
+    "title": "1  Participants",
     "section": "",
-    "text": "1.1 Participants by course\nThere were 3697 unique students across 49 course/groups with 23 instructors participating.\nBelow you can find a table of how many students completed surveys 1 and 2",
+    "text": "There were 3697 unique students across 49 course/groups with 23 instructors participating.\n\n1.0.1 Participation by Course\nIn the tables below, you can find course demographics and participant numbers for each survey",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Methods</span>"
-    ]
-  },
-  {
-    "objectID": "20-methods.html#demographics",
-    "href": "20-methods.html#demographics",
-    "title": "1  Methods",
-    "section": "1.2 Demographics",
-    "text": "1.2 Demographics\nBelow you can find various demographic tables\n\n\n\n\n\nCollege Type\nCount\nPercent\n\n\n\n\nPWI\n3697\n100%\n\n\n\n\n\n\n\n\n\n\nGender\nCount\nPercent\n\n\n\n\nMale\n1270\n34.4%\n\n\nFemale\n2181\n59%\n\n\nTrans/Nonbinary/NotAnswered\n141\n3.8%\n\n\nNA\n105\n2.8%\n\n\n\n\n\n\n\n\n\n\nURM\nCount\nPercent\n\n\n\n\n0\n2476\n67%\n\n\n1\n1221\n33%\n\n\n\n\n\n\n\n\n\n\nFirst-Generation\nCount\nPercent\n\n\n\n\n0\n2886\n78.1%\n\n\n1\n811\n21.9%\n\n\n\n\n\n\n\n\n\n\nPell Elligible\nCount\nPercent\n\n\n\n\nYes\n1033\n27.9%\n\n\nNo, I am not eligible\n2097\n56.7%\n\n\nNo, I am eligible but did not receive it\n80\n2.2%\n\n\nI don’t know\n383\n10.4%\n\n\nNA\n104\n2.8%\n\n\n\n\n\n\n\n\n\n\nEnglish First Language\nCount\nPercent\n\n\n\n\nNo. If not, what was your first language?\n815\n22%\n\n\nYes\n2783\n75.3%\n\n\nNA\n99\n2.7%",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Methods</span>"
-    ]
-  },
-  {
-    "objectID": "20-methods.html#how-long-did-the-survey-take",
-    "href": "20-methods.html#how-long-did-the-survey-take",
-    "title": "1  Methods",
-    "section": "1.3 How long did the survey take?",
-    "text": "1.3 How long did the survey take?",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Methods</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Participants</span>"
     ]
   },
   {
@@ -44,7 +24,7 @@
     "href": "30-practice-overview.html",
     "title": "2  Overview of Practices",
     "section": "",
-    "text": "2.1 Table of “Goodness”\nWe create a table of practice information\nConsistency of reporting within courses - F-value across courses\n`summarise()` has grouped output by 'practice_id'. You can override using the\n`.groups` argument.\n`summarise()` has grouped output by 'practice_id'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 56 × 5\n# Groups:   practice_id [56]\n   practice_id practice_wording    instr_occurance_perc…¹ instr_prioritize_per…²\n   &lt;chr&gt;       &lt;chr&gt;                                &lt;dbl&gt;                  &lt;dbl&gt;\n 1 A1.1        State that all stu…                  0.957                  0.435\n 2 A1.2        Describe how stude…                  0.652                  0.391\n 3 A1.3        Explain that stude…                  0.783                  0.565\n 4 A1.4        Celebrate how much…                  0.522                  0.478\n 5 A10.1       Refer to students …                  0.478                  0.217\n 6 A10.2       Encourage students…                  0.348                  0.217\n 7 A10.3       Help students make…                  0.913                  0.435\n 8 A10.4       Clarify how the sk…                  0.739                  0.478\n 9 A11.1       Incorporate real-w…                  0.957                  0.609\n10 A11.2       Incorporate studen…                  0.739                  0.391\n# ℹ 46 more rows\n# ℹ abbreviated names: ¹​instr_occurance_percent, ²​instr_prioritize_percent\n# ℹ 1 more variable: instr_response_char &lt;dbl&gt;\n\n\n`summarise()` has grouped output by 'practice_id', 'practice_wording',\n'inst_practice_YN'. You can override using the `.groups` argument.\n`summarise()` has grouped output by 'practice_id', 'practice_wording'. You can\noverride using the `.groups` argument.\nJoining with `by = join_by(practice_id, practice_wording)`\nJoining with `by = join_by(practice_id, practice_wording)`\nLooking at the data another way (not searchable)",
+    "text": "2.1 Description of Summary Statistics\nIn the following table, you’ll find a description of summary statistics ran for each practice collected.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview of Practices</span>"
     ]
@@ -53,38 +33,8 @@
     "objectID": "30-practice-overview.html#table-of-goodness",
     "href": "30-practice-overview.html#table-of-goodness",
     "title": "2  Overview of Practices",
-    "section": "",
-    "text": "occurrence Percent of students reporting the practice occurred\nimpact_rating Mean rating (1-5) of how impactful the practice was IF they said practice occurred\nhigh_impact Percent of students who put the practice was “Extremely Important” (5 of 5)\nfrequency_more_than_1_per_month Percent of the practice being frequent (“About 2-3 times per month” or “At least 1 time per week”)\noccurrence_this_week Percent of students reporting it had occurred in the past week.\noccurrence_inst_report Percent of instructors reporting “Yes”\noccurence_inst_NO Percent of students reporting (if instructor “No”) -\noccurence_inst_YES Percent of students reporting (if instructor “Yes”) -\noccurence_inst_signal Difference in student reporting when instructor says YES or NO\nICC Intraclass Correlation Coefficient\nConsistency\nF-value\n\n\n\n\n\n::: {#issue-s2-YN .issue}\n**Issue: Session 2 YN column**\n\nThere is something screwy with the YN practices column\n:::",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview of Practices</span>"
-    ]
-  },
-  {
-    "objectID": "30-practice-overview.html#limited-by-first-gen-and-underrepresented",
-    "href": "30-practice-overview.html#limited-by-first-gen-and-underrepresented",
-    "title": "2  Overview of Practices",
-    "section": "2.2 Limited by first-gen and underrepresented",
-    "text": "2.2 Limited by first-gen and underrepresented\n\n\n`summarise()` has grouped output by 'practice_id'. You can override using the\n`.groups` argument.\n`summarise()` has grouped output by 'practice_id'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 56 × 5\n# Groups:   practice_id [56]\n   practice_id practice_wording    instr_occurance_perc…¹ instr_prioritize_per…²\n   &lt;chr&gt;       &lt;chr&gt;                                &lt;dbl&gt;                  &lt;dbl&gt;\n 1 A1.1        State that all stu…                  0.957                  0.435\n 2 A1.2        Describe how stude…                  0.652                  0.391\n 3 A1.3        Explain that stude…                  0.783                  0.565\n 4 A1.4        Celebrate how much…                  0.522                  0.478\n 5 A10.1       Refer to students …                  0.478                  0.217\n 6 A10.2       Encourage students…                  0.348                  0.217\n 7 A10.3       Help students make…                  0.913                  0.435\n 8 A10.4       Clarify how the sk…                  0.739                  0.478\n 9 A11.1       Incorporate real-w…                  0.957                  0.609\n10 A11.2       Incorporate studen…                  0.739                  0.391\n# ℹ 46 more rows\n# ℹ abbreviated names: ¹​instr_occurance_percent, ²​instr_prioritize_percent\n# ℹ 1 more variable: instr_response_char &lt;dbl&gt;\n\n\n`summarise()` has grouped output by 'practice_id', 'practice_wording',\n'inst_practice_YN'. You can override using the `.groups` argument.\n`summarise()` has grouped output by 'practice_id', 'practice_wording'. You can\noverride using the `.groups` argument.\nJoining with `by = join_by(practice_id, practice_wording)`\nJoining with `by = join_by(practice_id, practice_wording)`",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview of Practices</span>"
-    ]
-  },
-  {
-    "objectID": "30-practice-overview.html#ranking-items",
-    "href": "30-practice-overview.html#ranking-items",
-    "title": "2  Overview of Practices",
-    "section": "2.3 Ranking items",
-    "text": "2.3 Ranking items\nWe also sort based on what makes a “good” item. I used the following criteria as a first pass: - students find impactful Do students find the practice impactful? (&lt;25th %ile = 0 point; 25th-75th %ile = 1 points, 75-90%ile = 2 points; &gt;90%ile = 3 points)  - Is it significantly more important to marginalized students? (No = 0 points; Yes = 2 points) - is there consistency of student-reports within courses? (&lt;25th %ile = 0 point; 25th-75th %ile = 1 points, &gt;75%ile = 2 points) - is there a signal across courses? (non-significant F-value = 0 point; &lt;75%ile sig F-value = 1 point, &gt;75%ile = 2 points) - does it predict student experiences? - students want instructors to prioritize (NEED TO ADD IN IMPORTANCE) - signal by instructor Are there positive differences in student reports when instructors do or do not report a practice? (&lt;= 0 difference = -1 points; 0-.10 = 0 points; .10-.20 = 1 point; .20-.30 = 2 points; .30-.40 = 4 points; etc.) - In what percent of courses is there significant change?* p&lt;.05 and shift of &gt; 10% in student responses. ( Determine criteria)",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview of Practices</span>"
-    ]
-  },
-  {
-    "objectID": "30-practice-overview.html#aggregate-correlation-between-variables-by-practice",
-    "href": "30-practice-overview.html#aggregate-correlation-between-variables-by-practice",
-    "title": "2  Overview of Practices",
-    "section": "2.4 Aggregate correlation between variables by practice",
-    "text": "2.4 Aggregate correlation between variables by practice",
+    "section": "2.2 Table of “Goodness”",
+    "text": "2.2 Table of “Goodness”\nIn the following table, you can see practice summary statistics. Note a few things you could do in this table:\n\nScroll to the right to find all variables in the table\nSearch for particular practices.\n\nIf you’d like to compare specific practices, you could type “(A1.2|A2.3|A4.1)” into the search box\n\n(Any regular expressions should work, like “A[1-2].[3-4]”)\nSort by statistic summary value to fine the highest or lowest values of practices (Click the column header)\n\n\n2.2.0.1 Transposed table\nBelow, you can find the same table as above, but transposed so that you can see all summary statistics of a particular item.\n\n\n\n\n\n\n\n\n2.2.1 Correlation between variables by practice\nCollapsing by practices, you can find the correlation between all summary statistics calculated below.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview of Practices</span>"
     ]
@@ -94,169 +44,69 @@
     "href": "31-practice-deepdive.html",
     "title": "3  Practice-level Info",
     "section": "",
-    "text": "3.1 A1.1: Description for A1.1\nBelow you can find a lot of relevant informaiton and figures for each practice collected. You can use the Table of contents to the right to select any practice of interest",
+    "text": "Below you can find a lot of relevant informaiton and figures for each practice collected. You can use the Table of contents to the right to select any practice of interest\n\n\n\n\n\nA1.1: State that all students can succeed in the course regardless of their current knowledge or prior grades\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nsucceed\n90\n\n\nknowledge\n75\n\n\nexam\n59\n\n\ngrades\n51\n\n\nbeginning\n47\n\n\nlearn\n45\n\n\nphysics\n40\n\n\nresources\n39\n\n\nlearning\n37\n\n\nprior\n37\n\n\n\n\n\n\n\n\n\n\n\nA1.2: Describe how students’ current knowledge comes from past experiences and does not reflect their future potential\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\npast\n64\n\n\nknowledge\n54\n\n\nphysics\n43\n\n\nfuture\n40\n\n\nexam\n37\n\n\nlearn\n36\n\n\nlearning\n36\n\n\nschool\n31\n\n\nsucceed\n30\n\n\nmaterial\n28\n\n\n\n\n\n\n\n\n\n\n\nA1.3: Explain that students need to have the right learning strategies to master the material\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nstudy\n110\n\n\nlearning\n91\n\n\nmaterial\n85\n\n\nexam\n80\n\n\nstrategies\n77\n\n\npractice\n67\n\n\nresources\n57\n\n\nstudying\n54\n\n\nexams\n42\n\n\nlearn\n39\n\n\n\n\n\n\n\n\n\n\n\nA1.4: Celebrate how much students have already learned to get to this point in the course\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nexam\n84\n\n\nlearned\n73\n\n\nunit\n46\n\n\ntest\n32\n\n\nexams\n27\n\n\nlearning\n26\n\n\nmaterial\n25\n\n\nlot\n24\n\n\nbeginning\n23\n\n\ncelebrated\n23\n\n\n\n\n\n\n\n\n\n\n\nA2.1: Demonstrate how mistakes can be valuable learning opportunities for the class\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nmistakes\n234\n\n\nexam\n89\n\n\nlearn\n87\n\n\nwrong\n69\n\n\nlearning\n63\n\n\nanswer\n50\n\n\nquestions\n50\n\n\ncommon\n45\n\n\nexams\n40\n\n\nmistake\n37\n\n\n\n\n\n\n\n\n\n\n\nA2.2: Talk through common errors that students in the class might make during exams or assignments\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\ncommon\n139\n\n\nmistakes\n134\n\n\nquestions\n118\n\n\nexam\n105\n\n\nquestion\n55\n\n\nerrors\n54\n\n\nwrong\n53\n\n\npeople\n48\n\n\nexams\n46\n\n\nmissed\n46\n\n\n\n\n\n\n\n\n\n\n\nA2.3: Allow students to learn from their mistakes on an assignment and resubmit work to improve their grade\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nlearning\n87\n\n\nattempts\n70\n\n\nexam\n70\n\n\nmodules\n70\n\n\nmistakes\n68\n\n\ngrade\n64\n\n\nretake\n58\n\n\nexams\n50\n\n\nresubmit\n47\n\n\nlearn\n44\n\n\n\n\n\n\n\n\n\n\n\nA2.4: Provide opportunities to earn back credit on exams if students show that they have learned from their mistakes\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nexam\n155\n\n\ncredit\n117\n\n\nexams\n115\n\n\nretake\n78\n\n\nextra\n63\n\n\nopportunity\n50\n\n\ngrade\n49\n\n\nsemester\n49\n\n\nmistakes\n46\n\n\nearn\n41\n\n\n\n\n\n\n\n\n\n\n\nA3.1: Give enough time for students to think independently before asking or answering questions\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nquestions\n288\n\n\ntime\n287\n\n\nanswer\n230\n\n\nquestion\n134\n\n\nminutes\n74\n\n\ndiscuss\n69\n\n\nanswers\n61\n\n\nindependently\n54\n\n\ntalk\n51\n\n\ninstapolls\n48\n\n\n\n\n\n\n\n\n\n\n\nA3.2: Ensure that most students have understood the material before moving on to other topics\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nquestions\n278\n\n\ntime\n98\n\n\ntopic\n90\n\n\nanswer\n85\n\n\nmoving\n80\n\n\nunderstand\n77\n\n\nquestion\n72\n\n\nmaterial\n69\n\n\nmakes\n53\n\n\ntopics\n34\n\n\n\n\n\n\n\n\n\n\n\nA3.3: Ask students to share their concerns or challenges in learning the course material\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nquestions\n244\n\n\nhours\n73\n\n\nconcerns\n72\n\n\nmaterial\n71\n\n\noffice\n70\n\n\nunderstand\n50\n\n\ntime\n41\n\n\nquestion\n39\n\n\nanswer\n37\n\n\ndiscussion\n34\n\n\n\n\n\n\n\n\n\n\n\nA3.4: Spend enough time to thoroughly answer students’ questions\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nquestions\n394\n\n\nanswer\n168\n\n\ntime\n140\n\n\nquestion\n123\n\n\nhours\n58\n\n\nanswers\n55\n\n\noffice\n51\n\n\nunderstand\n50\n\n\nanswering\n39\n\n\nmakes\n38\n\n\n\n\n\n\n\n\n\n\n\nA4.1: Have clear policies for late assignments or missed exams when life events disrupt students’ coursework\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nsyllabus\n261\n\n\nlate\n142\n\n\nassignments\n125\n\n\npolicies\n120\n\n\nexam\n96\n\n\nexams\n89\n\n\ndue\n75\n\n\npolicy\n74\n\n\nmissed\n65\n\n\nbeginning\n64\n\n\n\n\n\n\n\n\n\n\n\nA4.2: Encourage and respect the use of specific academic accommodations for students who would benefit from them (e.g., the Office of Student Disabilities)\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\naccommodations\n229\n\n\nexam\n75\n\n\nsyllabus\n56\n\n\ntime\n56\n\n\noffice\n55\n\n\nresources\n48\n\n\nmentioned\n47\n\n\nreach\n46\n\n\nacademic\n43\n\n\nbeginning\n40\n\n\n\n\n\n\n\n\n\n\n\nA4.3: State that students should reach out to instructors if they aren’t getting the support they need from university offices\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nhours\n123\n\n\noffice\n119\n\n\nreach\n91\n\n\nresources\n77\n\n\nsupport\n55\n\n\nquestions\n47\n\n\nmentioned\n42\n\n\nbeginning\n41\n\n\nsyllabus\n40\n\n\nuniversity\n37\n\n\n\n\n\n\n\n\n\n\n\nA4.4: Check in with students to see if anyone is encountering significant life challenges or needs additional support\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nresources\n28\n\n\nreach\n27\n\n\ncheck\n26\n\n\nhours\n22\n\n\ntalk\n21\n\n\ntime\n21\n\n\nhealth\n19\n\n\nmakes\n19\n\n\noffice\n19\n\n\nmental\n18\n\n\n\n\n\n\n\n\n\n\n\nA5.1: Provide guidance on how to use academic supports available to the class or provided by the university\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nhours\n185\n\n\nresources\n167\n\n\noffice\n166\n\n\nprovided\n56\n\n\nacademic\n55\n\n\nlearning\n52\n\n\nmentioned\n48\n\n\nquestions\n47\n\n\ncanvas\n46\n\n\nsupport\n45\n\n\n\n\n\n\n\n\n\n\n\nA5.2: Create course-specific materials to guide note-taking or studying in the course\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nnotes\n169\n\n\nexam\n100\n\n\npractice\n99\n\n\nreview\n84\n\n\nstudy\n83\n\n\nslides\n78\n\n\nunit\n67\n\n\nquestions\n63\n\n\nlearning\n61\n\n\nexams\n57\n\n\n\n\n\n\n\n\n\n\n\nA5.3: Provide resources for students to review foundational or prerequisite knowledge for the course\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nreview\n123\n\n\nmodules\n114\n\n\nresources\n108\n\n\nknowledge\n87\n\n\nmaterial\n74\n\n\nprovided\n65\n\n\ncanvas\n60\n\n\nprerequisite\n60\n\n\npractice\n56\n\n\ninformation\n52\n\n\n\n\n\n\n\n\n\n\n\nA5.4: Provide resources for students to explore advanced topics that go beyond the course material\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nresources\n110\n\n\ntopics\n76\n\n\nmaterial\n64\n\n\ncanvas\n50\n\n\nextra\n49\n\n\nlinks\n45\n\n\nlearn\n44\n\n\ninformation\n43\n\n\ntopic\n42\n\n\nadvanced\n41\n\n\n\n\n\n\n\n\n\n\n\nA6.1: Create opportunities for students to work with peers and collaboratively learn the material\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nquestions\n150\n\n\npeers\n104\n\n\ntalk\n104\n\n\ndiscuss\n86\n\n\nanswer\n84\n\n\npeople\n84\n\n\nmaterial\n74\n\n\ncollaborate\n73\n\n\ndiscussion\n64\n\n\nlearn\n58\n\n\n\n\n\n\n\n\n\n\n\nA6.2: Create opportunities for students to get to know their peers as people with lives outside of the classroom\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\ntalk\n99\n\n\npeers\n83\n\n\npeople\n53\n\n\nquestions\n50\n\n\ntime\n50\n\n\nencourages\n48\n\n\ndiscussion\n47\n\n\nlab\n45\n\n\nstudy\n39\n\n\nbeginning\n38\n\n\n\n\n\n\n\n\n\n\n\nA6.3: Provide clear expectations for how students should support and learn from each other\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nquestions\n79\n\n\nstudy\n79\n\n\nlearn\n75\n\n\ntalk\n74\n\n\nencourages\n63\n\n\npeers\n56\n\n\ncollaborate\n54\n\n\nencouraged\n46\n\n\nlearning\n39\n\n\npeople\n39\n\n\n\n\n\n\n\n\n\n\n\nA6.4: Encourage participation in specific student groups or events relevant to the course or field\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nencourages\n49\n\n\nencouraged\n44\n\n\ntalk\n44\n\n\nquestions\n42\n\n\ndiscussion\n37\n\n\npeers\n35\n\n\nopportunities\n34\n\n\nstudy\n34\n\n\nweek\n30\n\n\nevents\n29\n\n\n\n\n\n\n\n\n\n\n\nA7.1: Share a story of a meaningful moment that shaped their career or professional aspirations\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nphysics\n46\n\n\nshared\n40\n\n\ntalked\n40\n\n\nremember\n38\n\n\ncareer\n32\n\n\nresearch\n26\n\n\ntold\n23\n\n\nexperience\n22\n\n\ncollege\n19\n\n\nmoon\n19\n\n\n\n\n\n\n\n\n\n\n\nA7.2: Share personal stories or interests outside of their career that allow students to get to know them better\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nshared\n56\n\n\nbeginning\n40\n\n\ntold\n37\n\n\npersonal\n36\n\n\ntalked\n36\n\n\ntime\n34\n\n\nstories\n32\n\n\ntalks\n30\n\n\nphysics\n27\n\n\nremember\n27\n\n\n\n\n\n\n\n\n\n\n\nA7.3: Share a challenge they have encountered in their career or life and how they overcame it\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nphysics\n49\n\n\nshared\n31\n\n\ntalked\n31\n\n\ncollege\n25\n\n\nremember\n24\n\n\ntime\n22\n\n\ntold\n21\n\n\nmentioned\n18\n\n\ncareer\n17\n\n\nchemistry\n16\n\n\n\n\n\n\n\n\n\n\n\nA7.4: Express that they enjoy interacting with students during office hours or other meeting times\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nhours\n270\n\n\noffice\n270\n\n\nquestions\n83\n\n\nencourages\n55\n\n\nattend\n34\n\n\ntalk\n34\n\n\ntime\n29\n\n\nenjoys\n26\n\n\ntimes\n25\n\n\nweek\n25\n\n\n\n\n\n\n\n\n\n\n\nA8.1: Give students an opportunity to share their interests or activities outside of the course\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nshare\n70\n\n\ntalk\n63\n\n\nbeginning\n40\n\n\nquestions\n34\n\n\nactivities\n28\n\n\nweekend\n28\n\n\nlab\n27\n\n\npeople\n26\n\n\ntime\n26\n\n\nsemester\n22\n\n\n\n\n\n\n\n\n\n\n\nA8.2: Ask students to share something about their background or past experiences\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nshare\n43\n\n\nexperiences\n35\n\n\nbeginning\n33\n\n\npast\n31\n\n\nbackground\n26\n\n\nday\n24\n\n\ntalk\n20\n\n\nquestions\n18\n\n\nsemester\n18\n\n\nremember\n17\n\n\n\n\n\n\n\n\n\n\n\nA8.3: Ask students to reflect on important personal values, goals, or relationships in their lives\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\ngoals\n71\n\n\nvalues\n36\n\n\nbeginning\n35\n\n\npersonal\n35\n\n\nreflect\n35\n\n\nlives\n24\n\n\ntalk\n24\n\n\nquestions\n23\n\n\nshare\n23\n\n\ntime\n22\n\n\n\n\n\n\n\n\n\n\n\nA8.4: Promote the use of mental health services or provide other resources to support students’ mental health\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nhealth\n149\n\n\nmental\n145\n\n\nresources\n122\n\n\nservices\n55\n\n\nsyllabus\n53\n\n\nbeginning\n31\n\n\nmentioned\n31\n\n\nweek\n30\n\n\ncampus\n28\n\n\ntime\n25\n\n\n\n\n\n\n\n\n\n\n\nA9.1: Present class content that represents the perspectives and contributions of people with diverse backgrounds and identities\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\npeople\n61\n\n\nbackgrounds\n45\n\n\ndiverse\n28\n\n\ncontributions\n23\n\n\nscientists\n21\n\n\nbackground\n18\n\n\nchemistry\n18\n\n\nexamples\n17\n\n\nperspectives\n17\n\n\nphysics\n16\n\n\n\n\n\n\n\n\n\n\n\nA9.2: Acknowledge the historical context of the people and ideas discussed in the course, which may not reflect students’ backgrounds or perspectives\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nhistorical\n53\n\n\nhistory\n45\n\n\nideas\n34\n\n\npeople\n30\n\n\nbackground\n29\n\n\ncontext\n29\n\n\nscientists\n29\n\n\nphysics\n28\n\n\ntalked\n26\n\n\ntime\n25\n\n\n\n\n\n\n\n\n\n\n\nA9.3: Clearly state that a variety of perspectives are necessary and can uniquely contribute to new knowledge\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nperspectives\n77\n\n\nknowledge\n35\n\n\nlearning\n34\n\n\npeople\n32\n\n\nquestions\n28\n\n\nvariety\n28\n\n\nlearn\n27\n\n\nmultiple\n27\n\n\nphysics\n27\n\n\nperspective\n20\n\n\n\n\n\n\n\n\n\n\n\nA9.4: Describe how students will have unique challenges in college based on their backgrounds and prior experiences\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\ncollege\n42\n\n\nchallenges\n34\n\n\nbackground\n33\n\n\nbeginning\n33\n\n\nexperiences\n33\n\n\nbackgrounds\n31\n\n\nexperience\n30\n\n\nphysics\n30\n\n\nlearning\n27\n\n\npeople\n27\n\n\n\n\n\n\n\n\n\n\n\nA10.1: Refer to students as developing experts who can accomplish something meaningful in the future\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nfuture\n91\n\n\nencourages\n32\n\n\nlearn\n29\n\n\nencouraging\n25\n\n\nphysics\n24\n\n\nresearch\n24\n\n\nlab\n23\n\n\naccomplish\n22\n\n\nexam\n22\n\n\nlearning\n22\n\n\n\n\n\n\n\n\n\n\n\nA10.2: Encourage students to consider different career paths they might take in the future\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\ncareer\n86\n\n\npaths\n55\n\n\nresearch\n37\n\n\npre\n34\n\n\ntalked\n31\n\n\ncareers\n29\n\n\nfuture\n29\n\n\nphysics\n25\n\n\nchemistry\n24\n\n\noptions\n23\n\n\n\n\n\n\n\n\n\n\n\nA10.3: Help students make connections between this course and the things they hope to accomplish in life\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nfuture\n88\n\n\nreal\n83\n\n\nlife\n79\n\n\nphysics\n51\n\n\nworld\n50\n\n\nlearning\n41\n\n\ncareers\n39\n\n\ncareer\n37\n\n\nexamples\n33\n\n\nmedical\n33\n\n\n\n\n\n\n\n\n\n\n\nA10.4: Clarify how the skills developed in the course can benefit students after college\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nfuture\n93\n\n\nreal\n83\n\n\nskills\n71\n\n\nworld\n64\n\n\nlife\n59\n\n\ncollege\n51\n\n\nlearning\n49\n\n\nphysics\n39\n\n\ncareer\n36\n\n\nresearch\n36\n\n\n\n\n\n\n\n\n\n\n\nA11.1: Incorporate real-world examples and applications into course lectures or materials\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nreal\n276\n\n\nworld\n207\n\n\nexamples\n178\n\n\nlife\n70\n\n\nlearning\n67\n\n\nunderstand\n45\n\n\nconcepts\n42\n\n\nresearch\n37\n\n\napplications\n36\n\n\ndata\n32\n\n\n\n\n\n\n\n\n\n\n\nA11.2: Incorporate students’ interests or recent popular culture references into course lectures or materials\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nreal\n28\n\n\nexamples\n23\n\n\nculture\n22\n\n\nworld\n21\n\n\nmusic\n19\n\n\nreferences\n19\n\n\nlectures\n17\n\n\ndata\n16\n\n\nremember\n16\n\n\ntopics\n16\n\n\n\n\n\n\n\n\n\n\n\nA11.3: Explain the relevance of the course to current events or cutting-edge research\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nresearch\n108\n\n\nreal\n70\n\n\nworld\n57\n\n\ncurrent\n48\n\n\nexamples\n48\n\n\nlearning\n40\n\n\nevents\n39\n\n\nexplained\n26\n\n\nlife\n26\n\n\nmaterial\n19\n\n\n\n\n\n\n\n\n\n\n\nA11.4: Have students learn about experts who are exploring topics relevant to the course\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nexperts\n47\n\n\nresearch\n40\n\n\nlearning\n34\n\n\nrelevant\n25\n\n\ntopics\n25\n\n\nworld\n25\n\n\nreal\n24\n\n\nscientists\n23\n\n\npeople\n19\n\n\nfield\n18\n\n\n\n\n\n\n\n\n\n\n\nA12.1: Give students an opportunity to provide feedback about various aspects of the course\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nfeedback\n203\n\n\nsurvey\n144\n\n\nsurveys\n79\n\n\nquestions\n75\n\n\nprovide\n61\n\n\nopportunity\n39\n\n\ndiscussion\n34\n\n\nexam\n31\n\n\nhours\n29\n\n\nmaterial\n29\n\n\n\n\n\n\n\n\n\n\n\nA12.2: State how valuable collecting student feedback is for improving their teaching in the class\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nfeedback\n189\n\n\nsurvey\n120\n\n\nsurveys\n76\n\n\nimprove\n60\n\n\nquestions\n51\n\n\nteaching\n48\n\n\nfill\n35\n\n\nmentioned\n32\n\n\ntime\n32\n\n\nstated\n25\n\n\n\n\n\n\n\n\n\n\n\nA12.3: Share former or current students’ feedback on the course and describe what they changed based on this feedback\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nfeedback\n61\n\n\npast\n23\n\n\nprevious\n19\n\n\nquestions\n17\n\n\nsemester\n17\n\n\nshared\n17\n\n\nadvice\n15\n\n\nbeginning\n15\n\n\nday\n14\n\n\nexam\n13\n\n\n\n\n\n\n\n\n\n\n\nA12.4: Invite students to help design materials or assignments that will be used in the current course or future courses\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nfeedback\n32\n\n\nassignments\n24\n\n\nfuture\n21\n\n\nquestions\n20\n\n\nmaterials\n15\n\n\nproject\n13\n\n\ndesign\n12\n\n\nlab\n11\n\n\nsemester\n11\n\n\ninvited\n10\n\n\n\n\n\n\n\n\n\n\n\nA13.1: Have students answer questions in the course through a polling method\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nquestions\n245\n\n\nanswer\n229\n\n\ninstapoll\n133\n\n\nquestion\n115\n\n\ninstapolls\n104\n\n\npoll\n59\n\n\nanswers\n58\n\n\nmaterial\n50\n\n\ntime\n47\n\n\npolling\n45\n\n\n\n\n\n\n\n\n\n\n\nA13.2: Have students discuss a question or problem in pairs or in small groups\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\ndiscuss\n213\n\n\nquestions\n171\n\n\nanswer\n121\n\n\nquestion\n111\n\n\ntalk\n109\n\n\npeople\n83\n\n\npeers\n49\n\n\npractice\n49\n\n\ntime\n49\n\n\nneighbors\n48\n\n\n\n\n\n\n\n\n\n\n\nA13.3: Ask at least some students to verbally share answers or ideas with the whole class\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nanswer\n209\n\n\nquestions\n185\n\n\nshare\n109\n\n\nquestion\n98\n\n\nanswers\n75\n\n\npeople\n39\n\n\nideas\n31\n\n\npractice\n25\n\n\ndiscuss\n24\n\n\ntime\n24\n\n\n\n\n\n\n\n\n\n\n\nA13.4: Ask students to respond to classmates’ ideas or questions\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nquestions\n155\n\n\nanswer\n103\n\n\nquestion\n86\n\n\ndiscuss\n77\n\n\nrespond\n63\n\n\nideas\n51\n\n\nanswers\n47\n\n\nclassmates\n41\n\n\ntalk\n40\n\n\ndiscussion\n33\n\n\n\n\n\n\n\n\n\n\n\nA14.1: Have students analyze or interpret scientific data or mathematical models\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\ndata\n157\n\n\nmodels\n96\n\n\nanalyze\n95\n\n\ninterpret\n70\n\n\ngraphs\n68\n\n\nquestions\n58\n\n\nscientific\n55\n\n\nmathematical\n46\n\n\nunderstand\n34\n\n\nmodel\n30\n\n\n\n\n\n\n\n\n\n\n\nA14.2: Require student to extend or apply knowledge to situations or topics not yet covered in the course\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nknowledge\n50\n\n\ntopics\n48\n\n\napply\n47\n\n\nquestions\n42\n\n\nlearning\n41\n\n\ncovered\n39\n\n\nlearned\n36\n\n\nconcepts\n32\n\n\nmaterial\n31\n\n\nhomework\n24\n\n\n\n\n\n\n\n\n\n\n\nA14.3: Ask students to participate in open-ended exercises in which multiple correct answers are possible\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nquestions\n160\n\n\nmultiple\n109\n\n\nanswers\n97\n\n\nanswer\n85\n\n\ncorrect\n71\n\n\nquestion\n57\n\n\ndiscuss\n30\n\n\ninstapolls\n29\n\n\ntalk\n28\n\n\ntime\n25\n\n\n\n\n\n\n\n\n\n\n\nA14.4: Provide students with opportunities to reflect on the effectiveness of their learning and studying strategies\n\n\n\n\nMost Common Words in practice_describe\n\n\nword\nn\n\n\n\n\nexam\n130\n\n\nstudy\n104\n\n\nreflect\n87\n\n\nlearning\n79\n\n\nstrategies\n71\n\n\nstudying\n70\n\n\nquestions\n58\n\n\ntest\n50\n\n\nexams\n48\n\n\ntime\n47",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Practice-level Info</span>"
-    ]
-  },
-  {
-    "objectID": "31-practice-deepdive.html#a1.1-description-for-a1.1",
-    "href": "31-practice-deepdive.html#a1.1-description-for-a1.1",
-    "title": "3  Practice-level Info",
-    "section": "",
-    "text": "Warning: Removed 1709 rows containing non-finite outside the scale range\n(`stat_bin()`).",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Practice-level Info</span>"
-    ]
-  },
-  {
-    "objectID": "31-practice-deepdive.html#a1.2-description-for-a1.2",
-    "href": "31-practice-deepdive.html#a1.2-description-for-a1.2",
-    "title": "3  Practice-level Info",
-    "section": "3.2 A1.2: Description for A1.2",
-    "text": "3.2 A1.2: Description for A1.2\nWarning: Removed 1708 rows containing non-finite outside the scale range\n(`stat_bin()`).",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Practice-level Info</span>"
-    ]
-  },
-  {
-    "objectID": "31-practice-deepdive.html#a2.1-demonstrate-how-mistakes-can-be-valuable-learning-opportunities-for-the-class",
-    "href": "31-practice-deepdive.html#a2.1-demonstrate-how-mistakes-can-be-valuable-learning-opportunities-for-the-class",
-    "title": "3  Practice-level Info",
-    "section": "3.3 A2.1: Demonstrate how mistakes can be valuable learning opportunities for the class",
-    "text": "3.3 A2.1: Demonstrate how mistakes can be valuable learning opportunities for the class",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Practice-level Info</span>"
-    ]
-  },
-  {
-    "objectID": "31-practice-deepdive.html#a2.2-description-for-a2.2",
-    "href": "31-practice-deepdive.html#a2.2-description-for-a2.2",
-    "title": "3  Practice-level Info",
-    "section": "3.4 A2.2: Description for A2.2",
-    "text": "3.4 A2.2: Description for A2.2",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Practice-level Info</span>"
-    ]
-  },
-  {
-    "objectID": "40-grouping-practices.html",
-    "href": "40-grouping-practices.html",
-    "title": "4  Grouping practices together",
-    "section": "",
-    "text": "4.1 Eric’s grouping\nThere are a few ways we might consider grouping practices together. Below we present some of these ways:",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grouping practices together</span>"
-    ]
-  },
-  {
-    "objectID": "40-grouping-practices.html#erics-grouping",
-    "href": "40-grouping-practices.html#erics-grouping",
-    "title": "4  Grouping practices together",
-    "section": "",
-    "text": "4.1.1 Correlation matrix of unordered practices\nBelow, you’ll see some evidence that those items within the same group are more highly correlated. However, this could be an artifact of those items being presented on the same page to reduce student cognitive load.\nYou can zoom in on the graph below, or double-click to zoom out. On hover, you can see the pearson correlation between practice reporting.",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grouping practices together</span>"
-    ]
-  },
-  {
-    "objectID": "40-grouping-practices.html#exploratory-factor-analysis",
-    "href": "40-grouping-practices.html#exploratory-factor-analysis",
-    "title": "4  Grouping practices together",
-    "section": "4.2 Exploratory Factor Analysis",
-    "text": "4.2 Exploratory Factor Analysis\n\n\n\n\n\n\n\n\n\n [1] 0.270006424 0.044206409 0.040312303 0.031324576 0.029692238 0.026716939\n [7] 0.024923457 0.023135994 0.021481545 0.020739871 0.019555234 0.018382382\n[13] 0.018037593 0.017199963 0.016837548 0.015573880 0.014898576 0.014565381\n[19] 0.013608082 0.013550650 0.013233043 0.012753151 0.012430740 0.012118934\n[25] 0.012082542 0.011806326 0.011422859 0.011155664 0.011137007 0.010722593\n[31] 0.010216902 0.010056583 0.009956343 0.009703510 0.009158707 0.008845575\n[37] 0.008526904 0.008267669 0.008240047 0.007961774 0.007734795 0.007608682\n[43] 0.007275983 0.007115607 0.006941772 0.006446041 0.006309178 0.006161414\n[49] 0.005871386 0.005689742 0.005368092 0.005113521 0.004790790 0.004556308\n[55] 0.004463948 0.004006823\n\n\nLoading required namespace: GPArotation\n\n\n\nLoadings:\n      MR1   MR3   MR2  \nA1.1                   \nA1.2   0.44            \nA1.3                   \nA1.4                   \nA2.1                   \nA2.2                   \nA2.3               0.36\nA2.4   0.37        0.35\nA3.1         0.63      \nA3.2         0.56      \nA3.3         0.49      \nA3.4         0.69      \nA4.1         0.38      \nA4.2                   \nA4.3                   \nA4.4   0.53            \nA5.1               0.39\nA5.2               0.47\nA5.3               0.54\nA5.4   0.37        0.38\nA6.1         0.46      \nA6.2                   \nA6.3         0.36      \nA6.4   0.32            \nA7.1   0.47            \nA7.2   0.41            \nA7.3   0.61            \nA7.4         0.32      \nA8.1   0.43            \nA8.2   0.55            \nA8.3   0.61            \nA8.4   0.52            \nA9.1   0.72            \nA9.2   0.62            \nA9.3   0.60            \nA9.4   0.69            \nA10.1  0.49            \nA10.2  0.58            \nA10.3  0.46            \nA10.4  0.50            \nA11.1        0.46      \nA11.2  0.53            \nA11.3  0.44            \nA11.4  0.60            \nA12.1        0.39      \nA12.2        0.34      \nA12.3  0.56            \nA12.4  0.68            \nA13.1              0.38\nA13.2        0.44      \nA13.3        0.49      \nA13.4  0.32            \nA14.1                  \nA14.2  0.37            \nA14.3  0.33            \nA14.4                  \n\n                MR1  MR3  MR2\nSS loadings    8.61 4.01 2.36\nProportion Var 0.15 0.07 0.04\nCumulative Var 0.15 0.23 0.27\n\n\n\n4.2.0.1 Try hover text",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grouping practices together</span>"
-    ]
-  },
-  {
-    "objectID": "40-grouping-practices.html#eric-stopped-here",
-    "href": "40-grouping-practices.html#eric-stopped-here",
-    "title": "4  Grouping practices together",
-    "section": "4.3 ERIC STOPPED HERE",
-    "text": "4.3 ERIC STOPPED HERE",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grouping practices together</span>"
-    ]
-  },
-  {
-    "objectID": "40-grouping-practices.html#collapsing-across-classrooms-do-experiences-groupings-similarly-hold",
-    "href": "40-grouping-practices.html#collapsing-across-classrooms-do-experiences-groupings-similarly-hold",
-    "title": "4  Grouping practices together",
-    "section": "4.4 Collapsing across classrooms, do experiences groupings similarly hold?",
-    "text": "4.4 Collapsing across classrooms, do experiences groupings similarly hold?",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grouping practices together</span>"
-    ]
-  },
-  {
-    "objectID": "40-grouping-practices.html#which-experiences-predict-behavioral-outcomes-bcf",
-    "href": "40-grouping-practices.html#which-experiences-predict-behavioral-outcomes-bcf",
-    "title": "4  Grouping practices together",
-    "section": "4.5 Which experiences predict behavioral outcomes? (BCF)",
-    "text": "4.5 Which experiences predict behavioral outcomes? (BCF)",
-    "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Grouping practices together</span>"
     ]
   },
   {
     "objectID": "80-practice-open-responses.html",
     "href": "80-practice-open-responses.html",
-    "title": "5  Explore open responses",
+    "title": "4  Explore open responses",
     "section": "",
-    "text": "5.1 Students’ descriptions of courses\nBelow you can find open-responses collected from instructors and students. Data has been limited to 1000 rows to reduce load on your browser.\nYou can click on the blue buttons below to see and search the responses.\nOther than the things you’ve already shared, is there anything else you do in your course that you think other instructors would be interested in? (e.g., something new you are trying, something you are proud of, etc.). If so, please describe below.",
+    "text": "4.1 Students’ descriptions of courses\nBelow you can find open-responses collected from instructors and students. Data has been limited to 1000 rows to reduce load on your browser.\nYou can click on the blue buttons below to see and search the responses.\nOther than the things you’ve already shared, is there anything else you do in your course that you think other instructors would be interested in? (e.g., something new you are trying, something you are proud of, etc.). If so, please describe below.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Explore open responses</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Explore open responses</span>"
     ]
   },
   {
     "objectID": "80-practice-open-responses.html#students-descriptions-of-courses",
     "href": "80-practice-open-responses.html#students-descriptions-of-courses",
-    "title": "5  Explore open responses",
+    "title": "4  Explore open responses",
     "section": "",
     "text": "Show/Hide Responses",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Explore open responses</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Explore open responses</span>"
     ]
   },
   {
     "objectID": "80-practice-open-responses.html#students-practice-responses",
     "href": "80-practice-open-responses.html#students-practice-responses",
-    "title": "5  Explore open responses",
-    "section": "5.2 Students’ practice responses",
-    "text": "5.2 Students’ practice responses\nWe asked students:\n\nShow/Hide Responses with Practice Info\n\n\nShow/Hide Responses Only",
+    "title": "4  Explore open responses",
+    "section": "4.2 Students’ practice responses",
+    "text": "4.2 Students’ practice responses\nWe asked students:\n\nShow/Hide Responses with Practice Info\n\n\nShow/Hide Responses Only",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Explore open responses</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Explore open responses</span>"
     ]
   },
   {
     "objectID": "80-practice-open-responses.html#students-additional-comments-on-course",
     "href": "80-practice-open-responses.html#students-additional-comments-on-course",
-    "title": "5  Explore open responses",
-    "section": "5.3 Students’ additional comments on course",
-    "text": "5.3 Students’ additional comments on course\n\nShow/Hide Responses\n\n\n\n\n\n\n\n\n\n5.4 Instructors’ prioritized practices\n\nShow/Hide Responses",
+    "title": "4  Explore open responses",
+    "section": "4.3 Students’ additional comments on course",
+    "text": "4.3 Students’ additional comments on course\n\nShow/Hide Responses\n\n\n\n\n\n\n\n\n\n4.4 Instructors’ prioritized practices\n\nShow/Hide Responses",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Explore open responses</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Explore open responses</span>"
     ]
   },
   {
     "objectID": "80-practice-open-responses.html#instructors-prioritized-practices",
     "href": "80-practice-open-responses.html#instructors-prioritized-practices",
-    "title": "5  Explore open responses",
-    "section": "5.4 Instructors’ prioritized practices",
-    "text": "5.4 Instructors’ prioritized practices\n\nShow/Hide Responses",
+    "title": "4  Explore open responses",
+    "section": "4.4 Instructors’ prioritized practices",
+    "text": "4.4 Instructors’ prioritized practices\n\nShow/Hide Responses",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Explore open responses</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Explore open responses</span>"
     ]
   },
   {
     "objectID": "96-codebook.html",
     "href": "96-codebook.html",
-    "title": "6  Codebook",
+    "title": "5  Codebook",
     "section": "",
-    "text": "Below is the survey codebooks\nBelow you will find relevant information about all variables in the datafiles:\n\nsource = Where did the column come from?\nvar_category = What category of data is it?\n\nID = identifiers\nSurvey Data = information about survey engagement and completion\nCondition = manipulated conditions\nDemographics = unique data linked to participant\nDemographics (Calculated) = unique data linked to participant; calculated or aggregate\nCourse Experience = Quantitative data on overall course experiences\nPersonal Beliefs = Quantitative data on general experiences\nPractices = The practices collected\n\nvar_type = What type of data is it?\nvar_original_name = The original variable name in cleaning files\nvar_original_name = The updated variable name in cleaning files\nvar_intro_wording (optional) = Wording provided to participant prior to completing the item\nvar_wording = Item wording provided to participant OR description of calculated variable\nvar_scale = Response scale information\nvar_notes (optional) = Any other relevant information about the variable\nvar_reference (unused at this time) = TBD\n\nYou can search using the search button in the top right. Example search terms:\n\n“logical” = find all binary T/F variables\n“Demographics” = find all demographic items collected\n“A14” = find all variables that start with A14\n\n\n\n\n\n\n\n\n6.0.1 Add some info about cols",
+    "text": "Below is the survey codebooks\nBelow you will find relevant information about all variables in the datafiles:\n\nsource = Where did the column come from?\nvar_category = What category of data is it?\n\nID = identifiers\nSurvey Data = information about survey engagement and completion\nCondition = manipulated conditions\nDemographics = unique data linked to participant\nDemographics (Calculated) = unique data linked to participant; calculated or aggregate\nCourse Experience = Quantitative data on overall course experiences\nPersonal Beliefs = Quantitative data on general experiences\nPractices = The practices collected\n\nvar_type = What type of data is it?\nvar_original_name = The original variable name in cleaning files\nvar_original_name = The updated variable name in cleaning files\nvar_intro_wording (optional) = Wording provided to participant prior to completing the item\nvar_wording = Item wording provided to participant OR description of calculated variable\nvar_scale = Response scale information\nvar_notes (optional) = Any other relevant information about the variable\nvar_reference (unused at this time) = TBD\n\nYou can search using the search button in the top right. Example search terms:\n\n“logical” = find all binary T/F variables\n“Demographics” = find all demographic items collected\n“A14” = find all variables that start with A14\n\n\n\n\n\n\n\n\n5.0.1 Add some info about cols",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Codebook</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Codebook</span>"
     ]
   }
 ]
