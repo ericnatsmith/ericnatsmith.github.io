@@ -100,63 +100,93 @@
     ]
   },
   {
+    "objectID": "39-practice-overview-decisions.html",
+    "href": "39-practice-overview-decisions.html",
+    "title": "6  Backwards mapping of Version 3 Measure",
+    "section": "",
+    "text": "6.1 Overview\nIn the table below, you can find our most recent practice items, and whether chatGPT 4o could find a relevant quote from our students’ open responses, split by college (and only including URM students from PWI).\nYou can see specific quotes by hovering over the setting (e.g., put your cursor over “-HBCU” in Study 1 Quotes column)\nFor example,",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Backwards mapping of Version 3 Measure</span>"
+    ]
+  },
+  {
+    "objectID": "39-practice-overview-decisions.html#overview",
+    "href": "39-practice-overview-decisions.html#overview",
+    "title": "6  Backwards mapping of Version 3 Measure",
+    "section": "",
+    "text": "Practice A3.2 could be identified in all settings in both studies.\nPractice A4.3 has some quotes, but not clearly in line with the practice asked\nPractice A14.4 Only seemed to show up in the PWI setting in Studies 1 & 2.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Backwards mapping of Version 3 Measure</span>"
+    ]
+  },
+  {
+    "objectID": "39-practice-overview-decisions.html#does-each-practice-show-up-in-quotes",
+    "href": "39-practice-overview-decisions.html#does-each-practice-show-up-in-quotes",
+    "title": "6  Backwards mapping of Version 3 Measure",
+    "section": "6.2 Does each practice show up in quotes?",
+    "text": "6.2 Does each practice show up in quotes?",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Backwards mapping of Version 3 Measure</span>"
+    ]
+  },
+  {
     "objectID": "80-practice-open-responses.html",
     "href": "80-practice-open-responses.html",
-    "title": "6  Study 3 Explore open responses",
+    "title": "7  Study 3 Explore open responses",
     "section": "",
-    "text": "6.1 Students’ descriptions of courses\nBelow you can find open-responses collected from instructors and students. Data has been limited to 1000 rows to reduce load on your browser.\nYou can click on the blue buttons below to see and search the responses.\nOther than the things you’ve already shared, is there anything else you do in your course that you think other instructors would be interested in? (e.g., something new you are trying, something you are proud of, etc.). If so, please describe below.",
+    "text": "7.1 Students’ descriptions of courses\nBelow you can find open-responses collected from instructors and students. Data has been limited to 1000 rows to reduce load on your browser.\nYou can click on the blue buttons below to see and search the responses.\nOther than the things you’ve already shared, is there anything else you do in your course that you think other instructors would be interested in? (e.g., something new you are trying, something you are proud of, etc.). If so, please describe below.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Study 3 Explore open responses</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Study 3 Explore open responses</span>"
     ]
   },
   {
     "objectID": "80-practice-open-responses.html#students-descriptions-of-courses",
     "href": "80-practice-open-responses.html#students-descriptions-of-courses",
-    "title": "6  Study 3 Explore open responses",
+    "title": "7  Study 3 Explore open responses",
     "section": "",
     "text": "Show/Hide Responses",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Study 3 Explore open responses</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Study 3 Explore open responses</span>"
     ]
   },
   {
     "objectID": "80-practice-open-responses.html#students-practice-responses",
     "href": "80-practice-open-responses.html#students-practice-responses",
-    "title": "6  Study 3 Explore open responses",
-    "section": "6.2 Students’ practice responses",
-    "text": "6.2 Students’ practice responses\nWe asked students:\n\nShow/Hide Responses with Practice Info\n\n\nShow/Hide Responses Only",
+    "title": "7  Study 3 Explore open responses",
+    "section": "7.2 Students’ practice responses",
+    "text": "7.2 Students’ practice responses\nWe asked students:\n\nShow/Hide Responses with Practice Info\n\n\nShow/Hide Responses Only",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Study 3 Explore open responses</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Study 3 Explore open responses</span>"
     ]
   },
   {
     "objectID": "80-practice-open-responses.html#students-additional-comments-on-course",
     "href": "80-practice-open-responses.html#students-additional-comments-on-course",
-    "title": "6  Study 3 Explore open responses",
-    "section": "6.3 Students’ additional comments on course",
-    "text": "6.3 Students’ additional comments on course\n\nShow/Hide Responses\n\n\n\n\n\n\n\n\n\n6.4 Instructors’ prioritized practices\n\nShow/Hide Responses",
+    "title": "7  Study 3 Explore open responses",
+    "section": "7.3 Students’ additional comments on course",
+    "text": "7.3 Students’ additional comments on course\n\nShow/Hide Responses\n\n\n\n\n\n\n\n\n\n7.4 Instructors’ prioritized practices\n\nShow/Hide Responses",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Study 3 Explore open responses</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Study 3 Explore open responses</span>"
     ]
   },
   {
     "objectID": "80-practice-open-responses.html#instructors-prioritized-practices",
     "href": "80-practice-open-responses.html#instructors-prioritized-practices",
-    "title": "6  Study 3 Explore open responses",
-    "section": "6.4 Instructors’ prioritized practices",
-    "text": "6.4 Instructors’ prioritized practices\n\nShow/Hide Responses",
+    "title": "7  Study 3 Explore open responses",
+    "section": "7.4 Instructors’ prioritized practices",
+    "text": "7.4 Instructors’ prioritized practices\n\nShow/Hide Responses",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Study 3 Explore open responses</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Study 3 Explore open responses</span>"
     ]
   },
   {
     "objectID": "96-codebook.html",
     "href": "96-codebook.html",
-    "title": "7  Codebook",
+    "title": "8  Codebook",
     "section": "",
     "text": "Below is the survey codebooks\nBelow you will find relevant information about all variables in the datafiles:\n\nsource = Where did the column come from?\nvar_category = What category of data is it?\n\nID = identifiers\nSurvey Data = information about survey engagement and completion\nCondition = manipulated conditions\nDemographics = unique data linked to participant\nDemographics (Calculated) = unique data linked to participant; calculated or aggregate\nCourse Experience = Quantitative data on overall course experiences\nPersonal Beliefs = Quantitative data on general experiences\nPractices = The practices collected\n\nvar_type = What type of data is it?\nvar_original_name = The original variable name in cleaning files\nvar_original_name = The updated variable name in cleaning files\nvar_intro_wording (optional) = Wording provided to participant prior to completing the item\nvar_wording = Item wording provided to participant OR description of calculated variable\nvar_scale = Response scale information\nvar_notes (optional) = Any other relevant information about the variable\nvar_reference (unused at this time) = TBD\n\nYou can search using the search button in the top right. Example search terms:\n\n“logical” = find all binary T/F variables\n“Demographics” = find all demographic items collected\n“A14” = find all variables that start with A14",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Codebook</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Codebook</span>"
     ]
   }
 ]
